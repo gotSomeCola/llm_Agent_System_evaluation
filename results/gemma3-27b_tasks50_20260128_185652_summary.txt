@@ -1,0 +1,16 @@
+
+=== EVALUATION SUMMARY ===
+Model: gemma3-27b
+Total Tasks: 50
+
+Success Rates:
+- Compile Rate: 86.00% (43/50)
+- Pass Rate: 52.00% (26/50)
+
+Average Metrics:
+- Total Duration: 17.51s
+- Runtime (compilable only): 45.60ms
+- Code BLEU: 0.4224
+- CodeBERT F1: 0.8621
+
+Generated at: 2026-01-28 18:56:52
