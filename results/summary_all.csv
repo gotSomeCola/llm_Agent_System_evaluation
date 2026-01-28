@@ -1,0 +1,2 @@
+timestamp,model,total_tasks,compilable_count,compile_rate_%,pass_count,pass_rate_%,avg_duration_s,avg_runtime_ms,avg_code_bleu,avg_codebert_f1
+20260128 191106,gemma3-27b,50,43,86.00,26,52.00,17.51,45.60,0.4224,0.8621
