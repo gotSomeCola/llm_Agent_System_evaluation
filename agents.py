@@ -10,9 +10,9 @@ LLM_MODEL_NAME = "gemma3:27b"
 API_BASE = "https://f2ki-h100-1.f2.htw-berlin.de:11435/v1"
 API_KEY = "not-needed"
 
-def get_llm(temperature=0.0):
+def get_llm(model_name=None, temperature=0.0):
     return ChatOpenAI(
-        model=LLM_MODEL_NAME,
+        model=model_name or LLM_MODEL_NAME,
         openai_api_key=API_KEY,
         openai_api_base=API_BASE,
         temperature=temperature,
