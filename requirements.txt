@@ -4,3 +4,5 @@ langchain-openai
 tqdm
 codebleu~=0.7.0
 code_bert_score~=0.4.1
+tree-sitter==0.22.3
+tree-sitter-java==0.21.0

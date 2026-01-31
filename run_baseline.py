@@ -8,8 +8,6 @@ import metrics
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
-# 禁用 tokenizers 并行处理，避免 fork 警告
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # Importiere unsere Module
 from agents import get_llm, implementer_prompt, LLM_MODEL_NAME

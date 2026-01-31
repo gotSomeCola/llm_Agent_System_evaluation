@@ -14,26 +14,24 @@ from datetime import datetime
 MODELS_TO_TEST = [
 
     "gemma3:12b",
-    "llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
+    "gemma3:27b",
     "llama3.1:70b",
-    "llama3:8b",
-    "llama3.1:8b",
+    "llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
     "gpt-oss:20b",
     "gpt-oss:120b",
-    "hf.co/unsloth/Llama-4-Scout-17B-16E-Instruct-GGUF:latest",
 ]
 
 # 评估参数
 EVAL_CONFIG = {
-    "min_count": 0,
-    "max_count": 1000,     # 测试 1000 个任务 ← 改这里
+    "min_count": 101,
+    "max_count": 601,     # 测试 1000 个任务 ← 改这里
     "workers": 3,           # 4 个线程 ← 这个已经对了
-    "k": 1,                 # pass@1 评估 ← 改这里
-    "use_at_k": False       # 使用 pass@1 脚本（改为 False）← 改这里
+    "k": 5,         # pass@1 评估 ← 改这里
+    "use_at_k": True       # 使用 pass@1 脚本（改为 False）← 改这里
 }
 
 # 输出目录
-OUTPUT_DIR = "./results"
+OUTPUT_DIR = "./results/baseline_at_k_results"
 
 # ========== 主程序 ==========
 
@@ -132,7 +130,7 @@ def generate_report(model_name, jsonl_file):
                 print(f"  📄 {file_type}: {file_path}")
         
         # 显示 summary_all.csv 的路径
-        summary_all = os.path.join(output_dir, "summary_all.csv")
+        summary_all = os.path.join(output_dir, "summary_at_5.csv")
         if os.path.exists(summary_all):
             print(f"  📊 累积对比: {summary_all}")
         
@@ -212,7 +210,6 @@ def main():
         report_files = {
             "CSV": f"{base_path}.csv",
             "TXT": f"{base_path}_summary.txt",
-            "图表": f"{base_path}_distribution.png",
         }
         
         print(f"   格式化报告:")
@@ -222,7 +219,7 @@ def main():
         print()
     
     # 显示累积对比文件
-    summary_all_csv = os.path.join(OUTPUT_DIR, "summary_all.csv")
+    summary_all_csv = os.path.join(OUTPUT_DIR, "summary_at_5.csv")
     if os.path.exists(summary_all_csv):
         print(f"📊 累积对比文件: {summary_all_csv}")
         print(f"   （包含所有模型运行的汇总数据，用于对比分析）\n")
