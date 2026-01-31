@@ -22,7 +22,7 @@ def run_mvn_test(project_dir: str = "./project"):
             cwd=project_dir,
             capture_output=True,
             text=True,
-            timeout=45
+            timeout=90
         )
         return result.returncode, result.stdout + "\n" + result.stderr
 
