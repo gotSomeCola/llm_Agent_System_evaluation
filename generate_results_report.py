@@ -6,13 +6,7 @@ import os
 import argparse
 from datetime import datetime
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 from pathlib import Path
-
-# Set Chinese font support
-plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
-plt.rcParams['axes.unicode_minus'] = False
 
 def get_model_name_from_results(results):
     """Extract model name from results"""
@@ -111,7 +105,7 @@ Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         'avg_codebert': avg_codebert
     }
 
-def save_summary_csv(stats, timestamp, output_file='results/summary_all.csv'):
+def save_summary_csv(stats, timestamp, output_file='results/summary_pilot.csv'):
     """Save summary statistics to CSV (append mode for comparing multiple runs)"""
     import csv
     import os
@@ -149,38 +143,11 @@ def save_summary_csv(stats, timestamp, output_file='results/summary_all.csv'):
 
     print(f"✓ Summary CSV saved: {output_file}")
 
-def generate_visualizations(results, output_dir):
-    """Generate simple pie chart for pass rate (suitable for large-scale tests)"""
-    
-    total = len(results)
-    passed = sum(1 for r in results if r.get('pass', False))
-    failed_compilable = sum(1 for r in results if r.get('pass', False) is False and r.get('compilable', False))
-    not_compilable = sum(1 for r in results if r.get('compilable', False) is False)
-    
-    # Single pie chart for results
-    fig, ax = plt.subplots(figsize=(8, 6))
-    
-    sizes = [passed, failed_compilable, not_compilable]
-    labels = [f'Passed\n{passed} ({100*passed/total:.1f}%)', 
-              f'Failed (Compilable)\n{failed_compilable} ({100*failed_compilable/total:.1f}%)', 
-              f'Not Compilable\n{not_compilable} ({100*not_compilable/total:.1f}%)']
-    colors = ['#2ecc71', '#f39c12', '#e74c3c']
-    explode = (0.05, 0, 0)
-    
-    ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', 
-            startangle=90, explode=explode, textprops={'fontsize': 11, 'weight': 'bold'})
-    ax.set_title(f'Test Results Distribution (n={total})', fontsize=14, weight='bold', pad=20)
-    
-    plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, 'results_distribution.png'), dpi=300, bbox_inches='tight')
-    print(f"✓ Results distribution chart saved: {output_dir}/results_distribution.png")
-    plt.close()
-
 def main():
     parser = argparse.ArgumentParser(description='Generate results report from evaluation results')
-    parser.add_argument('--input', type=str, default='results_full_metrics.jsonl',
+    parser.add_argument('--input', type=str, default='./results/results_gemma3_27b_20260131_170427.jsonl',
                        help='Input JSONL file')
-    parser.add_argument('--output_dir', type=str, default='./results',
+    parser.add_argument('--output_dir', type=str, default='./results/baseline_results',
                        help='Output directory for reports')
     parser.add_argument('--model_name', type=str, default=None,
                        help='Model name for the report (auto-detected from agents.py if not provided)')
@@ -222,13 +189,10 @@ def main():
     # Generate summary
     stats = generate_summary_stats(results, stats_file, args.model_name)
     
-    # Generate visualizations
-    generate_visualizations(results, output_dir)
-    
     print(f"\n✓ All reports generated in: {output_dir}/")
     
     # Save summary to CSV (for comparing multiple runs)
-    summary_csv_file = os.path.join(output_dir, 'summary_all.csv')
+    summary_csv_file = os.path.join(output_dir, 'summary_pilot.csv')
     save_summary_csv(stats, timestamp.replace('_', ' '), summary_csv_file)
 
 if __name__ == '__main__':
