@@ -2,5 +2,5 @@ langchain>=0.2.0
 langchain-core
 langchain-openai
 tqdm
-code-bert-score
-codebleu
+codebleu~=0.7.0
+code_bert_score~=0.4.1
