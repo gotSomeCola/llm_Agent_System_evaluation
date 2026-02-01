@@ -100,8 +100,8 @@ def calculate_pass_at_k(n, c, k):
     if n < k:
         return 0.0 # Not enough samples to estimate pass@k
     
-    if c == n:
-        return 1.0 # All correct
+    if n - c < k:
+        return 1.0
 
     # Numerically stable calculation: 1 - product((n-c-i)/(n-i))
     prob_all_fail = 1.0

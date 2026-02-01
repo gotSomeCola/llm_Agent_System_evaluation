@@ -13,9 +13,9 @@ from datetime import datetime
 # 要测试的模型列表
 MODELS_TO_TEST = [
 
-    "gemma3:12b",
+    #"gemma3:12b",
     "gemma3:27b",
-    "llama3.1:70b",
+    #"llama3.1:70b",
     "llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
     "gpt-oss:20b",
     "gpt-oss:120b",
@@ -24,7 +24,7 @@ MODELS_TO_TEST = [
 # 评估参数
 EVAL_CONFIG = {
     "min_count": 101,
-    "max_count": 601,     # 测试 1000 个任务 ← 改这里
+    "max_count": 102,     # 测试 1000 个任务 ← 改这里
     "workers": 3,           # 4 个线程 ← 这个已经对了
     "k": 5,         # pass@1 评估 ← 改这里
     "use_at_k": True       # 使用 pass@1 脚本（改为 False）← 改这里
@@ -87,7 +87,7 @@ def run_evaluation(model_name, output_file, config):
             
             # 自动生成格式化报告
             print(f"\n⏳ 生成格式化报告中...")
-            generate_report(model_name, output_file)
+            generate_report(model_name, output_file, config["use_at_k"])
             
             return True
         else:
@@ -101,11 +101,14 @@ def run_evaluation(model_name, output_file, config):
         print(f"\n❌ 出错: {e}")
         return False
 
-def generate_report(model_name, jsonl_file):
+def generate_report(model_name, jsonl_file, use_at_k=False):
     """为评估结果生成格式化报告"""
     try:
+        # 选择报告生成脚本
+        script = "generate_pass_at_k_report.py" if use_at_k else "generate_results_report.py"
+        
         cmd = [
-            "python", "generate_results_report.py",
+            "python", script,
             "--input", jsonl_file,
         ]
         
@@ -119,20 +122,26 @@ def generate_report(model_name, jsonl_file):
         base_path = os.path.splitext(jsonl_file)[0]
         output_dir = os.path.dirname(jsonl_file)
         
-        report_files = {
-            "CSV": f"{base_path}.csv",
-            "TXT 总结": f"{base_path}_summary.txt",
-            "分布图": f"{base_path}_distribution.png",
-        }
+        if use_at_k:
+            report_files = {
+                "CSV 详细": f"{base_path}.csv",
+                "TXT 摘要": f"{base_path}_summary.txt",
+            }
+            summary_csv = os.path.join(output_dir, "summary_pass_at_k.csv")
+        else:
+            report_files = {
+                "CSV": f"{base_path}.csv",
+                "TXT 总结": f"{base_path}_summary.txt",
+            }
+            summary_csv = os.path.join(output_dir, "summary_pilot.csv")
         
         for file_type, file_path in report_files.items():
             if os.path.exists(file_path):
                 print(f"  📄 {file_type}: {file_path}")
         
-        # 显示 summary_all.csv 的路径
-        summary_all = os.path.join(output_dir, "summary_at_5.csv")
-        if os.path.exists(summary_all):
-            print(f"  📊 累积对比: {summary_all}")
+        # 显示累积对比文件
+        if os.path.exists(summary_csv):
+            print(f"  📊 累积对比: {summary_csv}")
         
     except subprocess.CalledProcessError as e:
         print(f"⚠️ 报告生成失败: {e}")
@@ -198,7 +207,8 @@ def main():
     print("📋 批量测试完成!")
     print("="*70)
     print(f"完成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"总结文件: {summary_file}\n")
+    print(f"总结文件: {summary_file}")
+    print(f"评估模式: {'Pass@{} (多次尝试)'.format(EVAL_CONFIG['k']) if EVAL_CONFIG['use_at_k'] else 'Pass@1 (单次尝试)'}\n")
     
     for i, model_result in enumerate(results_summary["models"], 1):
         status = "✅ 成功" if model_result["success"] else "❌ 失败"
@@ -207,6 +217,7 @@ def main():
         
         # 显示生成的报告文件
         base_path = os.path.splitext(model_result['output_file'])[0]
+        output_dir = os.path.dirname(model_result['output_file'])
         report_files = {
             "CSV": f"{base_path}.csv",
             "TXT": f"{base_path}_summary.txt",
@@ -216,13 +227,16 @@ def main():
         for file_type, file_path in report_files.items():
             if os.path.exists(file_path):
                 print(f"      📄 {file_type}: {file_path}")
+        
+        # 显示累积对比文件
+        if EVAL_CONFIG["use_at_k"]:
+            summary_file = os.path.join(output_dir, "summary_pass_at_k.csv")
+        else:
+            summary_file = os.path.join(output_dir, "summary_pilot.csv")
+        
+        if os.path.exists(summary_file):
+            print(f"      📊 累积对比: {summary_file}")
         print()
-    
-    # 显示累积对比文件
-    summary_all_csv = os.path.join(OUTPUT_DIR, "summary_at_5.csv")
-    if os.path.exists(summary_all_csv):
-        print(f"📊 累积对比文件: {summary_all_csv}")
-        print(f"   （包含所有模型运行的汇总数据，用于对比分析）\n")
     
     print("="*70 + "\n")
 
