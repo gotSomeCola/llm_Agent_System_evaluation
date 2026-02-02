@@ -1,0 +1,19 @@
+{
+  "start_time": "2026-02-02T05:11:43.697629",
+  "config": {
+    "min_count": 101,
+    "max_count": 601,
+    "workers": 2,
+    "k": 5,
+    "use_at_k": true
+  },
+  "models": [
+    {
+      "model": "gpt-oss:120b",
+      "output_file": "./results/baseline_at_k_results/results_gpt_oss_120b_20260202_051143.jsonl",
+      "success": true,
+      "timestamp": "2026-02-02T19:21:40.928443"
+    }
+  ],
+  "end_time": "2026-02-02T19:21:40.928648"
+}

@@ -14,18 +14,18 @@ from datetime import datetime
 MODELS_TO_TEST = [
 
     #"gemma3:12b",
-    "gemma3:27b",
+    #"gemma3:27b",
     #"llama3.1:70b",
-    "llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
-    "gpt-oss:20b",
+    #"llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
+    #"gpt-oss:20b",
     "gpt-oss:120b",
 ]
 
 # 评估参数
 EVAL_CONFIG = {
     "min_count": 101,
-    "max_count": 102,     # 测试 1000 个任务 ← 改这里
-    "workers": 3,           # 4 个线程 ← 这个已经对了
+    "max_count": 601,     # 测试 1000 个任务 ← 改这里
+    "workers": 2,           # 4 个线程 ← 这个已经对了
     "k": 5,         # pass@1 评估 ← 改这里
     "use_at_k": True       # 使用 pass@1 脚本（改为 False）← 改这里
 }
