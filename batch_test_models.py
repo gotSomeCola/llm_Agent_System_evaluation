@@ -1,63 +1,65 @@
 #!/usr/bin/env python3
 """
-批量测试脚本：依次运行多个模型的评估
-启动后可以去睡觉，脚本会自动处理所有测试
+Batch testing script: Run multiple model evaluations sequentially.
+Script can run automatically - set it and leave it running.
 """
 import subprocess
 import json
 import time
 import os
 from datetime import datetime
+from config import PASS_AT_K_EVAL_DIR, ensure_directories
 
-# ========== 配置区域 ==========
-# 要测试的模型列表
+# Configuration
+# Models to test
 MODELS_TO_TEST = [
 
     #"gemma3:12b",
     #"gemma3:27b",
     #"llama3.1:70b",
-    #"llama3.3:70b",          # Meta Llama 3.3 - 70B 参数（可选）
+    #"llama3.3:70b",
     #"gpt-oss:20b",
     "gpt-oss:120b",
 ]
 
-# 评估参数
+# Evaluation parameters
 EVAL_CONFIG = {
     "min_count": 101,
-    "max_count": 601,     # 测试 1000 个任务 ← 改这里
-    "workers": 2,           # 4 个线程 ← 这个已经对了
-    "k": 5,         # pass@1 评估 ← 改这里
-    "use_at_k": True       # 使用 pass@1 脚本（改为 False）← 改这里
+    "max_count": 601,
+    "workers": 2,
+    "k": 5,
+    "use_at_k": True
 }
 
-# 输出目录
-OUTPUT_DIR = "./results/baseline_at_k_results"
+# Output directory - use config-managed path
+OUTPUT_DIR = str(PASS_AT_K_EVAL_DIR)
 
-# ========== 主程序 ==========
+# Main program
 
 def ensure_output_dir():
-    """确保输出目录存在"""
+    """Ensure output directory exists."""
+    ensure_directories()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def generate_output_filename(model_name, timestamp):
-    """生成输出文件名"""
-    # 将模型名中的特殊字符替换为下划线
+    """Generate output filename."""
+    # Replace special characters with underscore
     safe_model_name = model_name.replace(":", "_").replace("-", "_")
     return os.path.join(OUTPUT_DIR, f"results_{safe_model_name}_{timestamp}.jsonl")
 
 def run_evaluation(model_name, output_file, config):
-    """运行单个模型的评估"""
+    """Run evaluation for a single model."""
     print(f"\n{'='*70}")
-    print(f"🚀 启动评估: {model_name}")
+    print(f"Starting evaluation: {model_name}")
     print(f"{'='*70}")
-    print(f"开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"输出文件: {output_file}")
-    print(f"配置: {config}")
+    print(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Output file: {output_file}")
+    print(f"Config: {config}")
     
-    # 选择脚本
+    # Select script based on evaluation mode
     script = "run_baseline_at_k.py" if config["use_at_k"] else "run_baseline.py"
     
-    # 构建命令
+    # Build command
     cmd = [
         "python", script,
         "--model_name", model_name,
@@ -67,101 +69,102 @@ def run_evaluation(model_name, output_file, config):
         "--workers", str(config["workers"]),
     ]
     
-    # 如果使用 pass@k，添加 k 参数
+    # Add k parameter if using pass@k
     if config["use_at_k"]:
         cmd.extend(["--k", str(config["k"])])
     
-    print(f"命令: {' '.join(cmd)}\n")
+    print(f"Command: {' '.join(cmd)}\n")
     
     try:
-        # 运行评估脚本
-        print("⏳ 运行评估中...")
+        # Run evaluation script
+        print("Running evaluation...")
         result = subprocess.run(cmd, check=True)
         
-        # 验证输出文件是否创建
+        # Verify output file was created
         if os.path.exists(output_file):
             file_size = os.path.getsize(output_file)
-            print(f"\n✅ 评估成功!")
-            print(f"JSONL 输出文件: {output_file}")
-            print(f"文件大小: {file_size / 1024:.2f} KB")
+            print(f"\n✓ Evaluation successful!")
+            print(f"JSONL output: {output_file}")
+            print(f"File size: {file_size / 1024:.2f} KB")
             
-            # 自动生成格式化报告
-            print(f"\n⏳ 生成格式化报告中...")
+            # Auto-generate formatted report
+            print(f"\nGenerating formatted report...")
             generate_report(model_name, output_file, config["use_at_k"])
             
             return True
         else:
-            print(f"\n⚠️ 警告: 输出文件未创建")
+            print(f"\n⚠ Warning: Output file not created")
             return False
             
     except subprocess.CalledProcessError as e:
-        print(f"\n❌ 评估失败: {e}")
+        print(f"\n✗ Evaluation failed: {e}")
         return False
     except Exception as e:
-        print(f"\n❌ 出错: {e}")
+        print(f"\n✗ Error: {e}")
         return False
 
 def generate_report(model_name, jsonl_file, use_at_k=False):
-    """为评估结果生成格式化报告"""
+    """Generate formatted report from evaluation results."""
     try:
-        # 选择报告生成脚本
-        script = "generate_pass_at_k_report.py" if use_at_k else "generate_results_report.py"
+        # Select report generation script based on mode
+        script = "generate_pass_at_k_report.py" if use_at_k else "generate_pass_at_1_report.py"
         
         cmd = [
             "python", script,
             "--input", jsonl_file,
         ]
         
-        print(f"命令: {' '.join(cmd)}")
+        print(f"Command: {' '.join(cmd)}")
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
         
-        print(f"✅ 报告生成成功!")
-        print(f"输出文件:")
+        print(f"✓ Report generated successfully!")
+        print(f"Output files:")
         
-        # 提取生成的文件名
+        # Extract generated filenames
         base_path = os.path.splitext(jsonl_file)[0]
         output_dir = os.path.dirname(jsonl_file)
         
         if use_at_k:
             report_files = {
-                "CSV 详细": f"{base_path}.csv",
-                "TXT 摘要": f"{base_path}_summary.txt",
+                "CSV Detail": f"{base_path}.csv",
+                "TXT Summary": f"{base_path}_summary.txt",
             }
             summary_csv = os.path.join(output_dir, "summary_pass_at_k.csv")
         else:
             report_files = {
                 "CSV": f"{base_path}.csv",
-                "TXT 总结": f"{base_path}_summary.txt",
+                "TXT Summary": f"{base_path}_summary.txt",
             }
             summary_csv = os.path.join(output_dir, "summary_pilot.csv")
         
         for file_type, file_path in report_files.items():
             if os.path.exists(file_path):
-                print(f"  📄 {file_type}: {file_path}")
+                print(f"  {file_type}: {file_path}")
         
-        # 显示累积对比文件
+        # Show comparison file if exists
         if os.path.exists(summary_csv):
-            print(f"  📊 累积对比: {summary_csv}")
+            print(f"  Comparison: {summary_csv}")
         
     except subprocess.CalledProcessError as e:
-        print(f"⚠️ 报告生成失败: {e}")
+        print(f"⚠ Report generation failed: {e}")
     except Exception as e:
-        print(f"⚠️ 报告生成出错: {e}")
+        print(f"⚠ Report generation error: {e}")
 
 def main():
-    """主程序"""
+    """Main execution function."""
     print("\n" + "="*70)
-    print("📊 LLM 代码生成评估 - 批量测试模式")
+    print("Batch LLM Code Generation Evaluation")
     print("="*70)
-    print(f"当前时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"测试模型数: {len(MODELS_TO_TEST)}")
-    print(f"模型列表: {', '.join(MODELS_TO_TEST)}")
-    print(f"评估模式: {'Pass@{} (多次尝试)'.format(EVAL_CONFIG['k']) if EVAL_CONFIG['use_at_k'] else 'Pass@1 (单次尝试)'}")
+    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Models to test: {len(MODELS_TO_TEST)}")
+    print(f"Model list: {', '.join(MODELS_TO_TEST)}")
+    mode = f"Pass@{EVAL_CONFIG['k']} (multiple attempts)" if EVAL_CONFIG['use_at_k'] else "Pass@1 (single attempt)"
+    print(f"Evaluation mode: {mode}")
     print("="*70 + "\n")
     
     ensure_output_dir()
     
-    # 记录时间戳
+    # Record timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
     results_summary = {
@@ -171,16 +174,16 @@ def main():
         "end_time": None
     }
     
-    # 依次运行每个模型
+    # Run each model sequentially
     for i, model_name in enumerate(MODELS_TO_TEST, 1):
         output_file = generate_output_filename(model_name, timestamp)
         
-        print(f"\n[{i}/{len(MODELS_TO_TEST)}] 处理模型: {model_name}")
+        print(f"\n[{i}/{len(MODELS_TO_TEST)}] Processing: {model_name}")
         
-        # 运行评估
+        # Run evaluation
         success = run_evaluation(model_name, output_file, EVAL_CONFIG)
         
-        # 记录结果
+        # Record result
         model_result = {
             "model": model_name,
             "output_file": output_file,
@@ -189,53 +192,54 @@ def main():
         }
         results_summary["models"].append(model_result)
         
-        # 如果不是最后一个模型，等待一下
+        # Wait before next model if not the last one
         if i < len(MODELS_TO_TEST):
-            print(f"\n⏳ 等待 10 秒后继续下一个模型...")
+            print(f"\nWaiting 10s before next model...")
             time.sleep(10)
     
-    # 完成
+    # Complete
     results_summary["end_time"] = datetime.now().isoformat()
     
-    # 保存总结
+    # Save summary
     summary_file = os.path.join(OUTPUT_DIR, f"batch_summary_{timestamp}.json")
     with open(summary_file, "w") as f:
         json.dump(results_summary, f, indent=2, ensure_ascii=False)
     
-    # 打印最终总结
-    print(f"\n\n" + "="*70)
-    print("📋 批量测试完成!")
+    # Print final summary
+    print(f"\n" + "="*70)
+    print("Batch Testing Complete!")
     print("="*70)
-    print(f"完成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"总结文件: {summary_file}")
-    print(f"评估模式: {'Pass@{} (多次尝试)'.format(EVAL_CONFIG['k']) if EVAL_CONFIG['use_at_k'] else 'Pass@1 (单次尝试)'}\n")
+    print(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Summary: {summary_file}")
+    mode = f"Pass@{EVAL_CONFIG['k']} (multiple attempts)" if EVAL_CONFIG['use_at_k'] else "Pass@1 (single attempt)"
+    print(f"Evaluation mode: {mode}\n")
     
     for i, model_result in enumerate(results_summary["models"], 1):
-        status = "✅ 成功" if model_result["success"] else "❌ 失败"
+        status = "✓ Success" if model_result["success"] else "✗ Failed"
         print(f"{i}. {model_result['model']}: {status}")
-        print(f"   原始数据: {model_result['output_file']}")
+        print(f"   Output: {model_result['output_file']}")
         
-        # 显示生成的报告文件
+        # Show generated report files
         base_path = os.path.splitext(model_result['output_file'])[0]
         output_dir = os.path.dirname(model_result['output_file'])
         report_files = {
             "CSV": f"{base_path}.csv",
-            "TXT": f"{base_path}_summary.txt",
+            "Summary": f"{base_path}_summary.txt",
         }
         
-        print(f"   格式化报告:")
+        print(f"   Reports:")
         for file_type, file_path in report_files.items():
             if os.path.exists(file_path):
-                print(f"      📄 {file_type}: {file_path}")
+                print(f"      {file_type}: {file_path}")
         
-        # 显示累积对比文件
+        # Show comparison file
         if EVAL_CONFIG["use_at_k"]:
             summary_file = os.path.join(output_dir, "summary_pass_at_k.csv")
         else:
             summary_file = os.path.join(output_dir, "summary_pilot.csv")
         
         if os.path.exists(summary_file):
-            print(f"      📊 累积对比: {summary_file}")
+            print(f"      Comparison: {summary_file}")
         print()
     
     print("="*70 + "\n")

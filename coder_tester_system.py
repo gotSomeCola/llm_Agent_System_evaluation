@@ -10,46 +10,51 @@ from tqdm import tqdm
 from langgraph.graph import StateGraph, END, START
 from langchain_core.output_parsers import StrOutputParser
 
-# Eigene Module
+# Custom modules
 import metrics
 from agents import (
     get_llm, 
     implementer_gen_prompt, 
     implementer_repair_prompt, 
     tester_feedback_prompt, 
+    retry_on_rate_limit,
     LLM_MODEL_NAME
 )
 from utils import create_solution_file
 from tools import run_mvn_test
 from run_baseline import load_leetcode_dataset, setup_project_env, cleanup_project_env
+from config import REPAIRS_EVAL_DIR
 
-# --- 1. STATE DEFINITION ---
+# Global variable for model name
+GLOBAL_MODEL_NAME = LLM_MODEL_NAME
+
+# State Definition
 class AgentState(TypedDict):
-    # Statische Daten
+    # Static data
     task_id: str
     task_description: str
     rahmen_code: str
     test_content: str
     referenz_code: Optional[str]
     
-    # Dynamische Daten
+    # Dynamic data
     code: str             
     logs: str             
     feedback: str         
     iterations: int       
     success: bool         
-    compilable: bool      # Syntax-Status
-    trace: list[str]      # Verlauf der Konversation
+    compilable: bool
+    trace: list[str]
 
-    # Env Paths
+    # Environment paths
     project_dir: str
     src_dir: str
     test_dir: str
 
-# --- 2. NODES ---
+# Node Definitions
 
 def setup_node(state: AgentState):
-    """Initialisiert die Umgebung."""
+    """Initialize the environment and set up project directories."""
     proj, src, test = setup_project_env(state["task_id"])
     return {
         "project_dir": proj, 
@@ -61,22 +66,27 @@ def setup_node(state: AgentState):
         "trace": []
     }
 
+@retry_on_rate_limit(max_retries=10, wait_seconds=10)
+def _invoke_llm_chain(chain, input_data):
+    """Invoke LLM chain with automatic retry on rate limit errors."""
+    return chain.invoke(input_data)
+
 def implementer_node(state: AgentState):
-    """Implementer Agent (Coder)."""
-    llm = get_llm(temperature=0.0)
+    """Implementer node generates or repairs code based on feedback."""
+    llm = get_llm(model_name=GLOBAL_MODEL_NAME, temperature=0.0)
     current_iter = state.get("iterations", 0)
     
     if current_iter == 0:
-        # Initial Draft
+        # Initial code generation
         chain = implementer_gen_prompt | llm | StrOutputParser()
-        generated_text = chain.invoke({
+        generated_text = _invoke_llm_chain(chain, {
             "task_description": state["task_description"],
             "rahmen_code": state["rahmen_code"]
         })
     else:
-        # Repair Mode
+        # Code repair mode
         chain = implementer_repair_prompt | llm | StrOutputParser()
-        generated_text = chain.invoke({
+        generated_text = _invoke_llm_chain(chain, {
             "task_description": state["task_description"],
             "code": state["code"],
             "feedback": state["feedback"]
@@ -84,7 +94,6 @@ def implementer_node(state: AgentState):
     
     clean_code = create_solution_file("// unused", generated_text)
     
-    # TRACE LOGGING
     action = "Initial Draft" if current_iter == 0 else "Repair"
     msg = f"Iter {current_iter}: Implementer performed {action}"
     
@@ -95,8 +104,8 @@ def implementer_node(state: AgentState):
     }
 
 def executor_node(state: AgentState):
-    """Executor Tool (Maven)."""
-    # 1. Package Fix (Robustheit)
+    """Execute Maven compilation and test to verify code correctness."""
+    # Ensure correct package declaration
     solution_code = state["code"]
     if not solution_code.strip().startswith("package referenz;"):
         lines = solution_code.splitlines()
@@ -112,11 +121,10 @@ def executor_node(state: AgentState):
     with open(os.path.join(state["test_dir"], "SolutionTest.java"), "w", encoding="utf-8") as f:
         f.write(t_content)
         
-    # 2. Maven Run
+    # Run Maven tests
     return_code, logs = run_mvn_test(state["project_dir"])
     eval_result = metrics.evaluate_test_results(return_code, logs)
     
-    # TRACE LOGGING
     status = "PASSED" if eval_result["pass"] else "FAILED"
     msg = f"Iter {state['iterations']-1}: Test {status}"
     
@@ -128,20 +136,18 @@ def executor_node(state: AgentState):
     }
 
 def tester_node(state: AgentState):
-    """Tester Agent (Feedback)."""
-    llm = get_llm(temperature=0.0)
+    """Tester node generates feedback on failed code execution."""
+    llm = get_llm(model_name=GLOBAL_MODEL_NAME, temperature=0.0)
     chain = tester_feedback_prompt | llm | StrOutputParser()
     
-    # Logs kürzen
     short_logs = state["logs"][:8000]
     
-    feedback = chain.invoke({
+    feedback = _invoke_llm_chain(chain, {
         "task_description": state["task_description"],
         "code": state["code"],
         "error_log": short_logs
     })
     
-    # TRACE LOGGING
     snippet = feedback[:100].replace("\n", " ") + "..."
     msg = f"Iter {state['iterations']-1}: Tester feedback: '{snippet}'"
     
@@ -150,22 +156,19 @@ def tester_node(state: AgentState):
         "trace": state["trace"] + [msg]
     }
 
-# --- 3. EDGES ---
+# Edge routing logic
 
 def should_continue(state: AgentState) -> Literal["tester", END]:
-    """Entscheidet über den nächsten Schritt."""
-    # 1. Abbruch bei Erfolg
     if state["success"]:
         return END
     
-    # 2. Abbruch bei Limit (1 Draft + 4 Repairs = 5 Iterationen)
+    # Max iterations: 5 (1 initial draft + 4 repair attempts)
     if state["iterations"] >= 5:
         return END
         
-    # 3. Weiter zum Tester
     return "tester"
 
-# --- 4. GRAPH BUILDER ---
+# Graph builder
 
 def build_repair_graph():
     workflow = StateGraph(AgentState)
@@ -192,7 +195,7 @@ def build_repair_graph():
     
     return workflow.compile()
 
-# --- 5. RUNNER ---
+# Task evaluation logic
 
 def evaluate_single_task_graph(problem):
     raw_id = problem.get('task_id', 'unknown')
@@ -221,31 +224,28 @@ def evaluate_single_task_graph(problem):
         final_state = app.invoke(initial_inputs)
         cleanup_project_env(final_state["project_dir"])
         
-        # --- METRICS CALCULATION ---
         c_bleu = 0.0
         c_bert = 0.0
         if final_state["success"] and final_state.get("referenz_code"):
             c_bleu = metrics.calculate_code_bleu(final_state["referenz_code"], final_state["code"]).get("codebleu", 0.0)
             _, _, c_bert = metrics.evaluate_code_with_codeBert_score(final_state["referenz_code"], final_state["code"])
 
-        # Berechne Repair Rounds (Iterations - 1, da 1. Iteration der Initial Draft ist)
-        # Wenn iterations=1 -> Rounds=0
+        # Calculate repair rounds: iterations - 1 (first iteration is initial draft)
         repair_rounds = final_state["iterations"] - 1
 
-        # --- PASS AT K LOGIC (REPAIR CONTEXT) ---
-        # Pass@1: Erfolg im Initial Draft (0 Repair Rounds)
+        # Pass@1: Success on first attempt (0 repair rounds)
         pass_at_1 = 1.0 if (final_state["success"] and repair_rounds == 0) else 0.0
         
-        # Pass@k: Erfolg innerhalb des Limits (Egal wann)
+        # Pass@k: Success within iteration limit
         pass_at_k = 1.0 if final_state["success"] else 0.0
 
         return {
-            "model_name": LLM_MODEL_NAME,
+            "model_name": GLOBAL_MODEL_NAME,
             "id": task_id,
             "title": problem.get('prompt', {}).get('problem', task_id),
             "pass": final_state["success"],
-            "pass_at_1": pass_at_1,       # <--- NEU
-            "pass_at_k": pass_at_k,       # <--- NEU
+            "pass_at_1": pass_at_1,
+            "pass_at_k": pass_at_k,
             "compilable": final_state.get("compilable", False),
             "repair_rounds": repair_rounds,
             "final_code": final_state["code"],
@@ -265,7 +265,7 @@ def main_runner_graph(output_file, min_count, max_count, concurrency=1):
     end_index = min(len(full_data), max_count if max_count > 0 else len(full_data))
     data_batch = full_data[start_index:end_index]
     
-    print(f"--- Starting Graph-Controlled Repair Eval ---")
+    print(f"Starting repair evaluation with graph-controlled workflow")
     print(f"Tasks: {len(data_batch)} | Workers: {concurrency}")
     
     success_count = 0
@@ -288,12 +288,16 @@ def main_runner_graph(output_file, min_count, max_count, concurrency=1):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output_file', type=str, default="results_graph.jsonl")
+    parser.add_argument('--output_file', type=str, default=str(REPAIRS_EVAL_DIR / "results_graph.jsonl"))
     parser.add_argument('--min_count', type=int, default=0)
     parser.add_argument('--max_count', type=int, default=5)
     parser.add_argument('--workers', type=int, default=1)
+    parser.add_argument('--model_name', type=str, default=LLM_MODEL_NAME)
     
     args = parser.parse_args()
+    
+    # Set global model name
+    GLOBAL_MODEL_NAME = args.model_name
     
     main_runner_graph(
         output_file=args.output_file,
