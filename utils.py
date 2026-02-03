@@ -4,34 +4,32 @@ import re
 
 def parse_llm_response(full_response: str):
     """
-    Bereinigt die Antwort vom LLM.
-    Extrahiert den Code aus Markdown Code-Blöcken.
+    Clean up LLM response and extract code from markdown blocks.
     """
     text = full_response.strip()
     
-    # Markdown Code Block extrahieren
-    # Suche nach ```java oder einfach nur ```
+    # Extract markdown code block (```java or ```)
     code_blocks = re.findall(r'```(?:java)?\s*\n?(.*?)```', text, re.DOTALL)
     
     if code_blocks:
-        # Nimm den längsten Block (meistens der Code, nicht die Erklärung)
+        # Use the longest block (usually the code, not the explanation)
         clean_code = max(code_blocks, key=len)
     else:
-        # Kein Markdown? Versuche direkten Text
+        # No markdown, use text directly
         clean_code = text
 
     return clean_code.strip()
 
 def create_solution_file(framework_code_unused: str, llm_response: str) -> str:
     """
-    Erstellt die finale Solution.java Datei.
+    Create the final Solution.java file from LLM response.
     """
     raw_code = parse_llm_response(llm_response)
     
     lines = raw_code.splitlines()
     final_lines = []
     
-    # Header setzen
+    # Set package header
     final_lines.append("package referenz;")
     final_lines.append("") 
     
@@ -40,15 +38,15 @@ def create_solution_file(framework_code_unused: str, llm_response: str) -> str:
     for line in lines:
         stripped = line.strip()
         
-        # Package vom LLM entfernen
+        # Remove package declaration from LLM response
         if stripped.startswith("package "):
             continue
             
-        # Klasse umbenennen falls nötig (z.B. public class Main -> Solution)
+        # Rename class if needed (e.g., public class Main -> Solution)
         if "class " in line and "Solution" not in line:
             if "public class" in line:
                  line = re.sub(r'public class \w+', 'public class Solution', line)
-            elif not class_found: # Die erste gefundene Klasse wird Solution
+            elif not class_found:
                  line = line.replace("class ", "public class ")
                  line = re.sub(r'class \w+', 'class Solution', line)
         

@@ -2,21 +2,21 @@
 import argparse
 import json
 import os
-import shutil # Zum Löschen von Ordnern
+import shutil
 import time
 import metrics
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
 
-# Importiere unsere Module
-from agents import get_llm, implementer_prompt, LLM_MODEL_NAME
+# Import custom modules
+from agents import get_llm, implementer_gen_prompt, LLM_MODEL_NAME
 from utils import create_solution_file
 from tools import run_mvn_test
 from langchain_core.output_parsers import StrOutputParser
  
 
-# --- KONFIGURATION ---
+# Configuration
 PROJECT_BASE_DIR = "./project"
 DATASET_PATH = './leetcode_dataset.json'
 
@@ -27,7 +27,7 @@ def ensure_directory_exists(directory):
 def load_leetcode_dataset():
     data = []
     if not os.path.exists(DATASET_PATH):
-        print(f"Warnung: {DATASET_PATH} nicht gefunden.")
+        print(f"Warning: {DATASET_PATH} not found.")
         return []
         
     with open(DATASET_PATH, 'r', encoding='utf-8') as file:
@@ -42,37 +42,37 @@ def load_leetcode_dataset():
 
 def setup_project_env(task_id):
     """
-    为每个任务创建隔离的项目环境
-    这支持真正的多线程执行而不会产生竞态条件
+    Create isolated project environment for each task.
+    Supports true multi-threaded execution without race conditions.
     """
     path = os.path.join(PROJECT_BASE_DIR, f"proj_{task_id}")
     src = os.path.join(path, "src/main/java/referenz")
     test = os.path.join(path, "src/test/java/referenz")
     
-    # 清理旧目录（如果存在）
+    # Clean old directory if exists
     if os.path.exists(path):
         try:
             shutil.rmtree(path)
         except OSError:
             pass
     
-    # 创建新目录
+    # Create new directories
     os.makedirs(src, exist_ok=True)
     os.makedirs(test, exist_ok=True)
     
-    # 确保 pom.xml 存在
+    # Ensure pom.xml exists
     pom_dest = os.path.join(path, "pom.xml")
     if not os.path.exists(pom_dest):
         if os.path.exists("./pom.xml"):
             shutil.copy("./pom.xml", pom_dest)
         else:
-            print(f"ACHTUNG: Keine pom.xml gefunden! Test für {task_id} wird scheitern.")
+            print(f"Warning: pom.xml not found! Test for {task_id} will fail.")
         
     return path, src, test
 
 def cleanup_project_env(path):
     """
-    清理临时项目目录，释放磁盘空间
+    Clean up temporary project directory and free disk space.
     """
     if os.path.exists(path):
         try:
@@ -183,7 +183,7 @@ def main_runner(model_name, output_file, min_count, max_count, concurrency=1):
         return
 
     llm = get_llm(model_name=model_name, temperature=0.0)
-    chain = implementer_prompt | llm | StrOutputParser()
+    chain = implementer_gen_prompt | llm | StrOutputParser()
     
     success_count = 0
     
@@ -209,8 +209,8 @@ if __name__ == "__main__":
     parser.add_argument('--model_name', type=str, default=LLM_MODEL_NAME,
                        help=f'Model name (default: {LLM_MODEL_NAME})')
     parser.add_argument('--output_file', type=str, default="results_full_metrics.jsonl")
-    parser.add_argument('--min_count', type=int, default=0)
-    parser.add_argument('--max_count', type=int, default=5)
+    parser.add_argument('--min_count', type=int, default=50)
+    parser.add_argument('--max_count', type=int, default=100)
     parser.add_argument('--workers', type=int, default=1)
     
     args = parser.parse_args()

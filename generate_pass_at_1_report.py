@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime
 import pandas as pd
 from pathlib import Path
+from config import BASELINE_REPORTS_DIR, ensure_directories
 
 def get_model_name_from_results(results):
     """Extract model name from results"""
@@ -25,9 +26,11 @@ def load_results(jsonl_file):
                 continue
     return results
 
-def create_results_folder(base_path='./results'):
-    """Create results folder if it doesn't exist"""
-    Path(base_path).mkdir(exist_ok=True)
+def create_results_folder(base_path=None):
+    """Create results folder if it doesn't exist. Uses config defaults if not specified."""
+    if base_path is None:
+        base_path = str(BASELINE_REPORTS_DIR)
+    Path(base_path).mkdir(parents=True, exist_ok=True)
     return base_path
 
 def generate_csv_report(results, output_file):
@@ -105,10 +108,13 @@ Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         'avg_codebert': avg_codebert
     }
 
-def save_summary_csv(stats, timestamp, output_file='results/summary_pilot.csv'):
+def save_summary_csv(stats, timestamp, output_file=None):
     """Save summary statistics to CSV (append mode for comparing multiple runs)"""
     import csv
     import os
+    
+    if output_file is None:
+        output_file = str(BASELINE_REPORTS_DIR / 'summary_pilot.csv')
 
     file_exists = os.path.exists(output_file)
 
@@ -147,7 +153,7 @@ def main():
     parser = argparse.ArgumentParser(description='Generate results report from evaluation results')
     parser.add_argument('--input', type=str, default='./results/results_gemma3_27b_20260131_170427.jsonl',
                        help='Input JSONL file')
-    parser.add_argument('--output_dir', type=str, default='./results/baseline_results',
+    parser.add_argument('--output_dir', type=str, default=str(BASELINE_REPORTS_DIR),
                        help='Output directory for reports')
     parser.add_argument('--model_name', type=str, default=None,
                        help='Model name for the report (auto-detected from agents.py if not provided)')

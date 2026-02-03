@@ -61,7 +61,7 @@ def setup_project_env(task_id):
         if os.path.exists("./pom.xml"):
             shutil.copy("./pom.xml", pom_dest)
         else:
-            print(f"ACHTUNG: Keine pom.xml gefunden! Test für {task_id} wird scheitern.")
+            print(f"Warning: pom.xml not found! Test for {task_id} will fail.")
         
     return path, src, test
 

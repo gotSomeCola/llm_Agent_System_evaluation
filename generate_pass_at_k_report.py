@@ -8,6 +8,7 @@ import argparse
 from datetime import datetime
 import pandas as pd
 from pathlib import Path
+from config import PASS_AT_K_REPORTS_DIR, ensure_directories
 
 
 def load_pass_at_k_results(jsonl_file):
@@ -196,9 +197,12 @@ def save_summary_jsonl(stats, output_file):
     print(f"✓ Summary JSONL saved: {output_file}")
 
 
-def save_summary_csv(stats, output_file='./results/pass_at_k_reports/summary_pass_at_k.csv'):
+def save_summary_csv(stats, output_file=None):
     """Save summary statistics to CSV (append mode for comparing multiple models)"""
     import csv
+    
+    if output_file is None:
+        output_file = str(PASS_AT_K_REPORTS_DIR / 'summary_pass_at_k.csv')
     
     file_exists = os.path.exists(output_file)
     
@@ -245,7 +249,7 @@ def save_summary_csv(stats, output_file='./results/pass_at_k_reports/summary_pas
 def main():
     parser = argparse.ArgumentParser(description='Generate pass@k evaluation reports')
     parser.add_argument('--input', type=str, required=True, help='Input JSONL file with pass@k results')
-    parser.add_argument('--output_dir', type=str, default='./results/pass_at_k_reports', help='Output directory for reports')
+    parser.add_argument('--output_dir', type=str, default=str(PASS_AT_K_REPORTS_DIR), help='Output directory for reports')
     parser.add_argument('--model_name', type=str, default=None, help='Model name (auto-detected if not provided)')
     
     args = parser.parse_args()
