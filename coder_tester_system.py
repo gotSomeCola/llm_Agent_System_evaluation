@@ -2,15 +2,15 @@ import argparse
 import json
 import os
 import shutil
-from typing import TypedDict, Optional
+from typing import TypedDict, Optional, Literal
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
-# LangChain / LangGraph
+# LangGraph & LangChain Imports
+from langgraph.graph import StateGraph, END, START
 from langchain_core.output_parsers import StrOutputParser
-from langgraph.graph import StateGraph, END
 
-# Import Metrics & Agents
+# Eigene Module
 import metrics
 from agents import (
     get_llm, 
@@ -25,20 +25,22 @@ from run_baseline import load_leetcode_dataset, setup_project_env, cleanup_proje
 
 # --- 1. STATE DEFINITION ---
 class AgentState(TypedDict):
-    # Static Data
+    # Statische Daten
     task_id: str
     task_description: str
     rahmen_code: str
     test_content: str
     referenz_code: Optional[str]
     
-    # Dynamic Data
-    code: str             # Current Java Code
-    logs: str             # Current Maven Logs
-    feedback: str         # Tester Feedback
-    iterations: int       # Attempt Counter
-    success: bool         # Pass Status
-    
+    # Dynamische Daten
+    code: str             
+    logs: str             
+    feedback: str         
+    iterations: int       
+    success: bool         
+    compilable: bool      # Syntax-Status
+    trace: list[str]      # Verlauf der Konversation
+
     # Env Paths
     project_dir: str
     src_dir: str
@@ -47,21 +49,20 @@ class AgentState(TypedDict):
 # --- 2. NODES ---
 
 def setup_node(state: AgentState):
-    """Creates isolated folder structure."""
+    """Initialisiert die Umgebung."""
     proj, src, test = setup_project_env(state["task_id"])
     return {
         "project_dir": proj, 
         "src_dir": src, 
         "test_dir": test,
         "iterations": 0,
-        "success": False
+        "success": False,
+        "compilable": False,
+        "trace": []
     }
 
 def implementer_node(state: AgentState):
-    """
-    Role: Developer
-    Logic: Chooses generation vs. repair prompt based on iteration count.
-    """
+    """Implementer Agent (Coder)."""
     llm = get_llm(temperature=0.0)
     current_iter = state.get("iterations", 0)
     
@@ -81,20 +82,23 @@ def implementer_node(state: AgentState):
             "feedback": state["feedback"]
         })
     
-    # Parse Markdown
     clean_code = create_solution_file("// unused", generated_text)
     
-    return {"code": clean_code, "iterations": current_iter + 1}
+    # TRACE LOGGING
+    action = "Initial Draft" if current_iter == 0 else "Repair"
+    msg = f"Iter {current_iter}: Implementer performed {action}"
+    
+    return {
+        "code": clean_code, 
+        "iterations": current_iter + 1,
+        "trace": state["trace"] + [msg]
+    }
 
 def executor_node(state: AgentState):
-    """
-    Role: Tool Executor (File System + Maven)
-    Logic: Enforces package declarations and runs tests.
-    """
-    # 1. Write Solution.java (Force Package Declaration)
+    """Executor Tool (Maven)."""
+    # 1. Package Fix (Robustheit)
     solution_code = state["code"]
     if not solution_code.strip().startswith("package referenz;"):
-        # Remove existing package lines if they exist (to avoid duplicates)
         lines = solution_code.splitlines()
         lines = [l for l in lines if not l.strip().startswith("package ")]
         solution_code = "package referenz;\n\n" + "\n".join(lines)
@@ -102,31 +106,33 @@ def executor_node(state: AgentState):
     with open(os.path.join(state["src_dir"], "Solution.java"), "w", encoding="utf-8") as f:
         f.write(solution_code)
         
-    # 2. Write Test File
     t_content = state["test_content"]
     if "package referenz" not in t_content:
         t_content = "package referenz;\n" + t_content
     with open(os.path.join(state["test_dir"], "SolutionTest.java"), "w", encoding="utf-8") as f:
         f.write(t_content)
         
-    # 3. Execute Maven
+    # 2. Maven Run
     return_code, logs = run_mvn_test(state["project_dir"])
     eval_result = metrics.evaluate_test_results(return_code, logs)
     
+    # TRACE LOGGING
+    status = "PASSED" if eval_result["pass"] else "FAILED"
+    msg = f"Iter {state['iterations']-1}: Test {status}"
+    
     return {
         "success": eval_result["pass"], 
-        "logs": logs
+        "compilable": eval_result["compilable"],
+        "logs": logs,
+        "trace": state["trace"] + [msg]
     }
 
 def tester_node(state: AgentState):
-    """
-    Role: QA Engineer
-    Logic: Analyzes logs and writes feedback.
-    """
+    """Tester Agent (Feedback)."""
     llm = get_llm(temperature=0.0)
     chain = tester_feedback_prompt | llm | StrOutputParser()
     
-    # Give Tester enough context (8k chars), but don't overflow context window
+    # Logs kürzen
     short_logs = state["logs"][:8000]
     
     feedback = chain.invoke({
@@ -135,25 +141,33 @@ def tester_node(state: AgentState):
         "error_log": short_logs
     })
     
-    return {"feedback": feedback}
+    # TRACE LOGGING
+    snippet = feedback[:100].replace("\n", " ") + "..."
+    msg = f"Iter {state['iterations']-1}: Tester feedback: '{snippet}'"
+    
+    return {
+        "feedback": feedback,
+        "trace": state["trace"] + [msg]
+    }
 
 # --- 3. EDGES ---
 
-def should_continue(state: AgentState):
-    """Decides the workflow path."""
+def should_continue(state: AgentState) -> Literal["tester", END]:
+    """Entscheidet über den nächsten Schritt."""
+    # 1. Abbruch bei Erfolg
     if state["success"]:
-        return "end"
+        return END
     
-    # Stop after Max Retries (e.g., 1 Initial + 3 Repairs = 4 Total)
-    if state["iterations"] >= 4:
-        return "end"
+    # 2. Abbruch bei Limit (1 Draft + 4 Repairs = 5 Iterationen)
+    if state["iterations"] >= 5:
+        return END
         
-    return "repair"
+    # 3. Weiter zum Tester
+    return "tester"
 
 # --- 4. GRAPH BUILDER ---
 
 def build_repair_graph():
-    """Builds a fresh graph instance."""
     workflow = StateGraph(AgentState)
     
     workflow.add_node("setup", setup_node)
@@ -161,7 +175,7 @@ def build_repair_graph():
     workflow.add_node("executor", executor_node)
     workflow.add_node("tester", tester_node)
     
-    workflow.set_entry_point("setup")
+    workflow.add_edge(START, "setup")
     workflow.add_edge("setup", "implementer")
     workflow.add_edge("implementer", "executor")
     
@@ -169,8 +183,8 @@ def build_repair_graph():
         "executor",
         should_continue,
         {
-            "end": END,
-            "repair": "tester"
+            "tester": "tester",
+            END: END
         }
     )
     
@@ -181,8 +195,6 @@ def build_repair_graph():
 # --- 5. RUNNER ---
 
 def evaluate_single_task_graph(problem):
-    """Runs the full workflow for a single task."""
-    # 1. Prepare Data
     raw_id = problem.get('task_id', 'unknown')
     task_id = str(raw_id).strip('/').split('/')[-1]
     
@@ -194,46 +206,56 @@ def evaluate_single_task_graph(problem):
         "rahmen_code": get_val('rahmen_code'),
         "referenz_code": get_val('referenz_code'),
         "test_content": get_val('test_content') or problem.get('test_code'),
-        # Dynamic fields start empty
         "iterations": 0,
         "success": False,
+        "compilable": False,
         "code": "",
         "logs": "",
-        "feedback": ""
+        "feedback": "",
+        "trace": []
     }
     
-    # 2. Build & Run Graph (Per-Thread Instance!)
     app = build_repair_graph()
     
     try:
         final_state = app.invoke(initial_inputs)
-        
-        # 3. Cleanup
         cleanup_project_env(final_state["project_dir"])
         
-        # 4. Metrics
+        # --- METRICS CALCULATION ---
         c_bleu = 0.0
         c_bert = 0.0
         if final_state["success"] and final_state.get("referenz_code"):
-            # Calculate metrics only on success to save time/compute
-            # Or calculate always if you want to analyze failed attempts too
             c_bleu = metrics.calculate_code_bleu(final_state["referenz_code"], final_state["code"]).get("codebleu", 0.0)
             _, _, c_bert = metrics.evaluate_code_with_codeBert_score(final_state["referenz_code"], final_state["code"])
+
+        # Berechne Repair Rounds (Iterations - 1, da 1. Iteration der Initial Draft ist)
+        # Wenn iterations=1 -> Rounds=0
+        repair_rounds = final_state["iterations"] - 1
+
+        # --- PASS AT K LOGIC (REPAIR CONTEXT) ---
+        # Pass@1: Erfolg im Initial Draft (0 Repair Rounds)
+        pass_at_1 = 1.0 if (final_state["success"] and repair_rounds == 0) else 0.0
+        
+        # Pass@k: Erfolg innerhalb des Limits (Egal wann)
+        pass_at_k = 1.0 if final_state["success"] else 0.0
 
         return {
             "model_name": LLM_MODEL_NAME,
             "id": task_id,
             "title": problem.get('prompt', {}).get('problem', task_id),
             "pass": final_state["success"],
-            "repair_rounds": final_state["iterations"] - 1, # 0 means First Try
+            "pass_at_1": pass_at_1,       # <--- NEU
+            "pass_at_k": pass_at_k,       # <--- NEU
+            "compilable": final_state.get("compilable", False),
+            "repair_rounds": repair_rounds,
             "final_code": final_state["code"],
             "code_bleu": round(c_bleu, 4),
             "code_bert_f1": round(c_bert, 4),
-            "logs": final_state["logs"][:500] # Truncated for storage
+            "logs": final_state["logs"][:500],
+            "history": final_state.get("trace", [])
         }
 
     except Exception as e:
-        # Fallback Cleanup
         cleanup_project_env(os.path.join("./project", f"proj_{task_id}"))
         return {"id": task_id, "pass": False, "error": str(e)}
 
