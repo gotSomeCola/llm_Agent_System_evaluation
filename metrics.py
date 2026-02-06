@@ -17,6 +17,40 @@ except ImportError:
     print("WARNING: 'codebleu' not installed. Metrics will be 0.")
     CODEBLEU_AVAILABLE = False
 
+
+def calculate_pass_at_k(n, c, k):
+    """
+    Calculates pass@k metric using the unbiased estimator from the Codex paper.
+    
+    Formula: pass@k = 1 - C(n-c, k) / C(n, k)
+    
+    Args:
+        n (int): Total attempts (samples)
+        c (int): Correct attempts
+        k (int): k-metric (e.g., 1, 3, 5)
+        
+    Returns:
+        float: Pass@k probability (0.0 to 1.0)
+        
+    Example:
+        >>> calculate_pass_at_k(n=5, c=2, k=1)  # 5 attempts, 2 succeeded, check pass@1
+        0.4
+        >>> calculate_pass_at_k(n=5, c=2, k=3)  # 5 attempts, 2 succeeded, check pass@3
+        0.9
+    """
+    if n < k:
+        return 0.0  # Not enough samples to estimate pass@k
+    
+    if n - c < k:
+        return 1.0  # More successes than failures, guaranteed pass
+    
+    # Numerically stable calculation: 1 - product((n-c-i)/(n-i)) for i in range(k)
+    prob_all_fail = 1.0
+    for i in range(k):
+        prob_all_fail *= (n - c - i) / (n - i)
+    
+    return 1.0 - prob_all_fail
+
 def evaluate_test_results(return_code: int, logs: str) -> dict:
     """
     Analyzes Maven logs to determine compilability and test success.

@@ -22,7 +22,7 @@ from agents import (
 )
 from utils import create_solution_file
 from tools import run_mvn_test
-from run_baseline import load_leetcode_dataset, setup_project_env, cleanup_project_env
+from run_baseline_at_k import load_leetcode_dataset, setup_project_env, cleanup_project_env
 from config import REPAIRS_EVAL_DIR
 
 # Global variable for model name
