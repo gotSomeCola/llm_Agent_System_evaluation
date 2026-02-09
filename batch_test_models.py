@@ -56,8 +56,8 @@ def run_evaluation(model_name, output_file, config):
     print(f"Output file: {output_file}")
     print(f"Config: {config}")
     
-    # Select script based on evaluation mode
-    script = "run_baseline_at_k.py" if config["use_at_k"] else "run_baseline.py"
+    # Always use run_baseline_at_k (k=1 acts as pass@1)
+    script = "run_baseline_at_k.py"
     
     # Build command
     cmd = [
@@ -69,9 +69,9 @@ def run_evaluation(model_name, output_file, config):
         "--workers", str(config["workers"]),
     ]
     
-    # Add k parameter if using pass@k
-    if config["use_at_k"]:
-        cmd.extend(["--k", str(config["k"])])
+    # Always pass k (use k=1 for pass@1)
+    k_value = config["k"] if config["use_at_k"] else 1
+    cmd.extend(["--k", str(k_value)])
     
     print(f"Command: {' '.join(cmd)}\n")
     

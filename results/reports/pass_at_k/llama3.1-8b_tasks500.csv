@@ -1,0 +1,501 @@
+ID,Title,N_Samples,Pass_At_1_Attempt,Num_Passed,Compilable_Count,Compilable_Rate,First_Pass_Attempt,Avg_Code_BLEU,Avg_CodeBERT_F1,First_Pass_Code_BLEU,First_Pass_CodeBERT_F1
+s0840_magic_squares_in_grid,Magic Squares In Grid,5,0,2,1,1.0000,1,0.2376,0.8097,0.2376,0.8097
+s0827_making_a_large_island,Making A Large Island,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0874_walking_robot_simulation,Walking Robot Simulation,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0832_flipping_an_image,Flipping an Image,5,1,5,1,1.0000,0,0.2979,0.7988,0.2979,0.7988
+s0853_car_fleet,Car Fleet,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0821_shortest_distance_to_a_character,Shortest Distance to a Character,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0878_nth_magical_number,Nth Magical Number,5,0,1,1,1.0000,2,0.3578,0.8181,0.3578,0.8181
+s0879_profitable_schemes,Profitable Schemes,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0831_masking_personal_information,Masking Personal Information,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0849_maximize_distance_to_closest_person,Maximize Distance to Closest Person,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0867_transpose_matrix,Transpose Matrix,5,1,5,1,1.0000,0,0.4795,0.8418,0.4795,0.8418
+s0888_fair_candy_swap,Fair Candy Swap,5,1,1,1,1.0000,0,0.4687,0.8987,0.4687,0.8987
+s0808_soup_servings,Soup Servings,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0884_uncommon_words_from_two_sentences,Uncommon Words from Two Sentences,5,1,4,1,1.0000,0,0.6992,0.8817,0.6992,0.8817
+s0846_hand_of_straights,Hand of Straights,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0890_find_and_replace_pattern,Find and Replace Pattern,5,0,1,1,1.0000,2,0.3747,0.7661,0.3747,0.7661
+s0837_new_21_game,New 21 Game,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0820_short_encoding_of_words,Short Encoding of Words,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0845_longest_mountain_in_array,Longest Mountain in Array,5,1,2,1,1.0000,0,0.5393,0.9164,0.5393,0.9164
+s0816_ambiguous_coordinates,Ambiguous Coordinates,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0803_bricks_falling_when_hit,Bricks Falling When Hit,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0862_shortest_subarray_with_sum_at_least_k,Shortest Subarray with Sum at Least K,5,0,2,1,1.0000,2,0.3681,0.8376,0.3681,0.8376
+s0806_number_of_lines_to_write_string,Number of Lines To Write String,5,1,5,1,1.0000,0,0.3216,0.8239,0.3216,0.8239
+s0833_find_and_replace_in_string,Find And Replace in String,5,1,3,1,1.0000,0,0.4888,0.8172,0.4888,0.8172
+s0892_surface_area_of_3d_shapes,Surface Area of 3D Shapes,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0810_chalkboard_xor_game,Chalkboard XOR Game,5,1,5,1,1.0000,0,0.6954,0.9792,0.6954,0.9792
+s0885_spiral_matrix_iii,Spiral Matrix III,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0865_smallest_subtree_with_all_the_deepest_nodes,Smallest Subtree with all the Deepest Nodes,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0844_backspace_string_compare,Backspace String Compare,5,1,3,1,1.0000,0,0.4038,0.7990,0.4038,0.7990
+s0817_linked_list_components,Linked List Components,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0838_push_dominoes,Push Dominoes,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0877_stone_game,Stone Game,5,1,2,1,1.0000,0,0.4493,0.8500,0.4493,0.8500
+s0872_leaf_similar_trees,Leaf-Similar Trees,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0898_bitwise_ors_of_subarrays,Bitwise ORs of Subarrays,5,1,3,1,1.0000,0,0.4629,0.9114,0.4629,0.9114
+s0886_possible_bipartition,Possible Bipartition,5,0,2,1,1.0000,3,0.2970,0.8140,0.2970,0.8140
+s0881_boats_to_save_people,Boats to Save People,5,1,4,1,1.0000,0,0.5698,0.9420,0.5698,0.9420
+s0871_minimum_number_of_refueling_stops,Minimum Number of Refueling Stops,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0829_consecutive_numbers_sum,Consecutive Numbers Sum,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0883_projection_area_of_3d_shapes,Projection Area of 3D Shapes,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0807_max_increase_to_keep_city_skyline,Max Increase to Keep City Skyline,5,1,3,1,1.0000,0,0.3783,0.8234,0.3783,0.8234
+s0826_most_profit_assigning_work,Most Profit Assigning Work,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0897_increasing_order_search_tree,Increasing Order Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0824_goat_latin,Goat Latin,5,0,1,1,1.0000,1,0.3323,0.8525,0.3323,0.8525
+s0860_lemonade_change,Lemonade Change,5,1,5,1,1.0000,0,0.7410,0.9380,0.7410,0.9380
+s0812_largest_triangle_area,Largest Triangle Area,5,1,5,1,1.0000,0,0.4208,0.8420,0.4208,0.8420
+s0899_orderly_queue,Orderly Queue,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0869_reordered_power_of_2,Reordered Power of 2,5,1,3,1,1.0000,0,0.3256,0.8295,0.3256,0.8295
+s0852_peak_index_in_a_mountain_array,Peak Index in a Mountain Array,5,1,5,1,1.0000,0,0.8714,0.9883,0.8714,0.9883
+s0809_expressive_words,Expressive Words,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0866_prime_palindrome,Prime Palindrome,5,1,4,1,1.0000,0,0.2229,0.7847,0.2229,0.7847
+s0854_k_similar_strings,K-Similar Strings,5,0,1,1,1.0000,3,0.3416,0.7838,0.3416,0.7838
+s0876_middle_of_the_linked_list,Middle of the Linked List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0801_minimum_swaps_to_make_sequences_increasing,Minimum Swaps To Make Sequences Increasing,5,0,1,1,1.0000,3,0.3847,0.8939,0.3847,0.8939
+s0848_shifting_letters,Shifting Letters,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0839_similar_string_groups,Similar String Groups,5,0,3,0,0.0000,1,0.3635,0.8019,0.3635,0.8019
+s0828_count_unique_characters_of_all_substrings_of_a_given_string,Count Unique Characters of All Substrings of a Given String,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0875_koko_eating_bananas,Koko Eating Bananas,5,1,5,1,1.0000,0,0.5147,0.8885,0.5147,0.8885
+s0893_groups_of_special_equivalent_strings,Groups of Special-Equivalent Strings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0861_score_after_flipping_matrix,Score After Flipping Matrix,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0834_sum_of_distances_in_tree,Sum of Distances in Tree,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0811_subdomain_visit_count,Subdomain Visit Count,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0850_rectangle_area_ii,Rectangle Area II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0804_unique_morse_code_words,Unique Morse Code Words,5,1,2,1,1.0000,0,0.7084,0.8097,0.7084,0.8097
+s0863_all_nodes_distance_k_in_binary_tree,All Nodes Distance K in Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0830_positions_of_large_groups,Positions of Large Groups,5,1,3,1,1.0000,0,0.5354,0.8598,0.5354,0.8598
+s0859_buddy_strings,Buddy Strings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0835_image_overlap,Image Overlap,5,0,1,1,1.0000,1,0.3084,0.7984,0.3084,0.7984
+s0870_advantage_shuffle,Advantage Shuffle,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0814_binary_tree_pruning,Binary Tree Pruning,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2381_shifting_letters_ii,Shifting Letters II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2315_count_asterisks,Count Asterisks,5,0,1,1,1.0000,3,0.3542,0.7915,0.3542,0.7915
+s2400_number_of_ways_to_reach_a_position_after_exactly_k_steps,Number of Ways to Reach a Position After Exactly k Steps,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2318_number_of_distinct_roll_sequences,Number of Distinct Roll Sequences,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2354_number_of_excellent_pairs,Number of Excellent Pairs,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2304_minimum_path_cost_in_a_grid,Minimum Path Cost in a Grid,5,0,1,1,1.0000,1,0.6040,0.8858,0.6040,0.8858
+s2365_task_scheduler_ii,Task Scheduler II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2342_max_sum_of_a_pair_with_equal_sum_of_digits,Max Sum of a Pair With Equal Sum of Digits,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2364_count_number_of_bad_pairs,Count Number of Bad Pairs,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2385_amount_of_time_for_binary_tree_to_be_infected,Amount of Time for Binary Tree to Be Infected,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2316_count_unreachable_pairs_of_nodes_in_an_undirected_graph,Count Unreachable Pairs of Nodes in an Undirected Graph,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2352_equal_row_and_column_pairs,Equal Row and Column Pairs,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2350_shortest_impossible_sequence_of_rolls,Shortest Impossible Sequence of Rolls,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2398_maximum_number_of_robots_within_budget,Maximum Number of Robots Within Budget,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2301_match_substring_after_replacement,Match Substring After Replacement,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2359_find_closest_node_to_given_two_nodes,Find Closest Node to Given Two Nodes,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2327_number_of_people_aware_of_a_secret,Number of People Aware of a Secret,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2337_move_pieces_to_obtain_a_string,Move Pieces to Obtain a String,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2366_minimum_replacements_to_sort_the_array,Minimum Replacements to Sort the Array,5,0,1,1,1.0000,3,0.3198,0.8396,0.3198,0.8396
+s2383_minimum_hours_of_training_to_win_a_competition,Minimum Hours of Training to Win a Competition,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2321_maximum_score_of_spliced_array,Maximum Score Of Spliced Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2326_spiral_matrix_iv,Spiral Matrix IV,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2305_fair_distribution_of_cookies,Fair Distribution of Cookies,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2399_check_distances_between_same_letters,Check Distances Between Same Letters,5,0,1,1,1.0000,2,0.5024,0.8258,0.5024,0.8258
+s2391_minimum_amount_of_time_to_collect_garbage,Minimum Amount of Time to Collect Garbage,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2380_time_needed_to_rearrange_a_binary_string,Time Needed to Rearrange a Binary String,5,1,5,1,1.0000,0,0.1453,0.7162,0.1453,0.7162
+s2334_subarray_with_elements_greater_than_varying_threshold,Subarray With Elements Greater Than Varying Threshold,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2367_number_of_arithmetic_triplets,Number of Arithmetic Triplets,5,1,2,1,1.0000,0,0.7016,0.9508,0.7016,0.9508
+s2396_strictly_palindromic_number,Strictly Palindromic Number,5,1,5,1,1.0000,0,0.4321,0.8224,0.4321,0.8224
+s2348_number_of_zero_filled_subarrays,Number of Zero-Filled Subarrays,5,1,3,1,1.0000,0,0.5224,0.8022,0.5224,0.8022
+s2376_count_special_integers,Count Special Integers,5,0,1,1,1.0000,1,0.1281,0.7253,0.1281,0.7253
+s2328_number_of_increasing_paths_in_a_grid,Number of Increasing Paths in a Grid,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2386_find_the_k_sum_of_an_array,Find the K-Sum of an Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2374_node_with_highest_edge_score,Node With Highest Edge Score,5,0,1,1,1.0000,1,0.3488,0.7863,0.3488,0.7863
+s2395_find_subarrays_with_equal_sum,Find Subarrays With Equal Sum,5,0,3,1,1.0000,2,0.7661,0.9566,0.7661,0.9566
+s2306_naming_a_company,Naming a Company,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2357_make_array_zero_by_subtracting_equal_amounts,Make Array Zero by Subtracting Equal Amounts,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2302_count_subarrays_with_score_less_than_k,Count Subarrays With Score Less Than K,5,0,1,1,1.0000,2,0.5092,0.9353,0.5092,0.9353
+s2322_minimum_score_after_removals_on_a_tree,Minimum Score After Removals on a Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2344_minimum_deletions_to_make_array_divisible,Minimum Deletions to Make Array Divisible,5,0,1,1,1.0000,1,0.3314,0.8264,0.3314,0.8264
+s2382_maximum_segment_sum_after_removals,Maximum Segment Sum After Removals,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2370_longest_ideal_subsequence,Longest Ideal Subsequence,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2384_largest_palindromic_number,Largest Palindromic Number,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2338_count_the_number_of_ideal_arrays,Count the Number of Ideal Arrays,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2335_minimum_amount_of_time_to_fill_cups,Minimum Amount of Time to Fill Cups,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2369_check_if_there_is_a_valid_partition_for_the_array,Check if There is a Valid Partition For The Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2358_maximum_number_of_groups_entering_a_competition,Maximum Number of Groups Entering a Competition,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2309_greatest_english_letter_in_upper_and_lower_case,Greatest English Letter in Upper and Lower Case,5,0,2,1,1.0000,2,0.3885,0.7996,0.3885,0.7996
+s2325_decode_the_message,Decode the Message,5,1,4,1,1.0000,0,0.3758,0.8330,0.3758,0.8330
+s2351_first_letter_to_appear_twice,First Letter to Appear Twice,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2360_longest_cycle_in_a_graph,Longest Cycle in a Graph,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2331_evaluate_boolean_binary_tree,Evaluate Boolean Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2347_best_poker_hand,Best Poker Hand,5,0,3,1,1.0000,1,0.3617,0.8149,0.3617,0.8149
+s2390_removing_stars_from_a_string,Removing Stars From a String,5,1,5,1,1.0000,0,0.5329,0.8519,0.5329,0.8519
+s2333_minimum_sum_of_squared_difference,Minimum Sum of Squared Difference,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2303_calculate_amount_paid_in_taxes,Calculate Amount Paid in Taxes,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2319_check_if_matrix_is_x_matrix,Check if Matrix Is X-Matrix,5,0,2,1,1.0000,1,0.5647,0.8960,0.5647,0.8960
+s2312_selling_pieces_of_wood,Selling Pieces of Wood,5,0,1,0,0.0000,2,0.2843,0.7531,0.2843,0.7531
+s2397_maximum_rows_covered_by_columns,Maximum Rows Covered by Columns,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2363_merge_similar_items,Merge Similar Items,5,1,4,1,1.0000,0,0.3661,0.8015,0.3661,0.8015
+s2317_maximum_xor_after_operations,Maximum XOR After Operations,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2379_minimum_recolors_to_get_k_consecutive_black_blocks,Minimum Recolors to Get K Consecutive Black Blocks,5,0,1,1,1.0000,3,0.3743,0.8057,0.3743,0.8057
+s2392_build_a_matrix_with_conditions,Build a Matrix With Conditions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2310_sum_of_numbers_with_units_digit_k,Sum of Numbers With Units Digit K,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2373_largest_local_values_in_a_matrix,Largest Local Values in a Matrix,5,0,4,1,1.0000,1,0.6769,0.9297,0.6769,0.9297
+s2341_maximum_number_of_pairs_in_array,Maximum Number of Pairs in Array,5,0,1,1,1.0000,3,0.3463,0.8381,0.3463,0.8381
+s2343_query_kth_smallest_trimmed_number,Query Kth Smallest Trimmed Number,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2375_construct_smallest_number_from_di_string,Construct Smallest Number From DI String,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2320_count_number_of_ways_to_place_houses,Count Number of Ways to Place Houses,5,1,1,1,1.0000,0,0.2476,0.7389,0.2476,0.7389
+s2368_reachable_nodes_with_restrictions,Reachable Nodes With Restrictions,5,1,2,1,1.0000,0,0.3625,0.8196,0.3625,0.8196
+s2311_longest_binary_subsequence_less_than_or_equal_to_k,Longest Binary Subsequence Less Than or Equal to K,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2389_longest_subsequence_with_limited_sum,Longest Subsequence With Limited Sum,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2332_the_latest_time_to_catch_a_bus,The Latest Time to Catch a Bus,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2442_count_number_of_distinct_integers_after_reverse_operations,Count Number of Distinct Integers After Reverse Operations,5,0,1,1,1.0000,2,0.6016,0.9120,0.6016,0.9120
+s2415_reverse_odd_levels_of_binary_tree,Reverse Odd Levels of Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2488_count_subarrays_with_median_k,Count Subarrays With Median K,5,0,1,1,1.0000,2,0.3193,0.8673,0.3193,0.8673
+s2432_the_employee_that_worked_on_the_longest_task,The Employee That Worked on the Longest Task,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2419_longest_subarray_with_maximum_bitwise_and,Longest Subarray With Maximum Bitwise AND,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2490_circular_sentence,Circular Sentence,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2500_delete_greatest_value_in_each_row,Delete Greatest Value in Each Row,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2482_difference_between_ones_and_zeros_in_row_and_column,Difference Between Ones and Zeros in Row and Column,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2405_optimal_partition_of_string,Optimal Partition of String,5,0,1,0,0.0000,4,0.4241,0.8108,0.4241,0.8108
+s2475_number_of_unequal_triplets_in_array,Number of Unequal Triplets in Array,5,1,3,1,1.0000,0,0.3156,0.7860,0.3156,0.7860
+s2447_number_of_subarrays_with_gcd_equal_to_k,Number of Subarrays With GCD Equal to K,5,0,1,1,1.0000,2,0.4999,0.8097,0.4999,0.8097
+s2426_number_of_pairs_satisfying_inequality,Number of Pairs Satisfying Inequality,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2413_smallest_even_multiple,Smallest Even Multiple,5,0,2,1,1.0000,1,0.6948,0.8626,0.6948,0.8626
+s2428_maximum_sum_of_an_hourglass,Maximum Sum of an Hourglass,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2449_minimum_number_of_operations_to_make_arrays_similar,Minimum Number of Operations to Make Arrays Similar,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2458_height_of_binary_tree_after_subtree_removal_queries,Height of Binary Tree After Subtree Removal Queries,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2451_odd_string_difference,Odd String Difference,5,0,1,1,1.0000,3,0.3864,0.8102,0.3864,0.8102
+s2463_minimum_total_distance_traveled,Minimum Total Distance Traveled,5,0,1,1,1.0000,1,0.3090,0.8228,0.3090,0.8228
+s2446_determine_if_two_events_have_conflict,Determine if Two Events Have Conflict,5,0,1,1,1.0000,1,0.2205,0.7593,0.2205,0.7593
+s2406_divide_intervals_into_minimum_number_of_groups,Divide Intervals Into Minimum Number of Groups,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2460_apply_operations_to_an_array,Apply Operations to an Array,5,1,5,1,1.0000,0,0.6067,0.9137,0.6067,0.9137
+s2430_maximum_deletions_on_a_string,Maximum Deletions on a String,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2409_count_days_spent_together,Count Days Spent Together,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2476_closest_nodes_queries_in_a_binary_search_tree,Closest Nodes Queries in a Binary Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2411_smallest_subarrays_with_maximum_bitwise_or,Smallest Subarrays With Maximum Bitwise OR,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2462_total_cost_to_hire_k_workers,Total Cost to Hire K Workers,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2486_append_characters_to_string_to_make_subsequence,Append Characters to String to Make Subsequence,5,1,5,1,1.0000,0,0.3383,0.7858,0.3383,0.7858
+s2492_minimum_score_of_a_path_between_two_cities,Minimum Score of a Path Between Two Cities,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2416_sum_of_prefix_scores_of_strings,Sum of Prefix Scores of Strings,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2456_most_popular_video_creator,Most Popular Video Creator,5,0,1,1,1.0000,4,0.4311,0.8339,0.4311,0.8339
+s2453_destroy_sequential_targets,Destroy Sequential Targets,5,1,1,1,1.0000,0,0.4305,0.8372,0.4305,0.8372
+s2401_longest_nice_subarray,Longest Nice Subarray,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2477_minimum_fuel_cost_to_report_to_the_capital,Minimum Fuel Cost to Report to the Capital,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2425_bitwise_xor_of_all_pairings,Bitwise XOR of All Pairings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2410_maximum_matching_of_players_with_trainers,Maximum Matching of Players With Trainers,5,1,5,1,1.0000,0,0.5323,0.8984,0.5323,0.8984
+s2471_minimum_number_of_operations_to_sort_a_binary_tree_by_level,Minimum Number of Operations to Sort a Binary Tree by Level,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2497_maximum_star_sum_of_a_graph,Maximum Star Sum of a Graph,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2435_paths_in_matrix_whose_sum_is_divisible_by_k,Paths in Matrix Whose Sum Is Divisible by K,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2498_frog_jump_ii,Frog Jump II,5,0,1,1,1.0000,3,0.5212,0.8574,0.5212,0.8574
+s2481_minimum_cuts_to_divide_a_circle,Minimum Cuts to Divide a Circle,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2418_sort_the_people,Sort the People,5,1,3,1,1.0000,0,0.2151,0.7211,0.2151,0.7211
+s2420_find_all_good_indices,Find All Good Indices,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2469_convert_the_temperature,Convert the Temperature,5,1,5,1,1.0000,0,0.4963,0.8676,0.4963,0.8676
+s2414_length_of_the_longest_alphabetical_continuous_substring,Length of the Longest Alphabetical Continuous Substring,5,1,4,1,1.0000,0,0.4125,0.8337,0.4125,0.8337
+s2485_find_the_pivot_integer,Find the Pivot Integer,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2467_most_profitable_path_in_a_tree,Most Profitable Path in a Tree,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2437_number_of_valid_clock_times,Number of Valid Clock Times,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2472_maximum_number_of_non_overlapping_palindrome_substrings,Maximum Number of Non-overlapping Palindrome Substrings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2478_number_of_beautiful_partitions,Number of Beautiful Partitions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2491_divide_players_into_teams_of_equal_skill,Divide Players Into Teams of Equal Skill,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2440_create_components_with_same_value,Create Components With Same Value,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2483_minimum_penalty_for_a_shop,Minimum Penalty for a Shop,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2448_minimum_cost_to_make_array_equal,Minimum Cost to Make Array Equal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2457_minimum_addition_to_make_integer_beautiful,Minimum Addition to Make Integer Beautiful,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2407_longest_increasing_subsequence_ii,Longest Increasing Subsequence II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2439_minimize_maximum_of_array,Minimize Maximum of Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2465_number_of_distinct_averages,Number of Distinct Averages,5,0,1,0,0.0000,1,0.5230,0.8132,0.5230,0.8132
+s2429_minimize_xor,Minimize XOR,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2421_number_of_good_paths,Number of Good Paths,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2496_maximum_value_of_a_string_in_an_array,Maximum Value of a String in an Array,5,0,3,1,1.0000,2,0.3409,0.7936,0.3409,0.7936
+s2493_divide_nodes_into_the_maximum_number_of_groups,Divide Nodes Into the Maximum Number of Groups,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2454_next_greater_element_iv,Next Greater Element IV,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2402_meeting_rooms_iii,Meeting Rooms III,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2444_count_subarrays_with_fixed_bounds,Count Subarrays With Fixed Bounds,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2438_range_product_queries_of_powers,Range Product Queries of Powers,5,1,2,1,1.0000,0,0.3320,0.8041,0.3320,0.8041
+s2433_find_the_original_array_of_prefix_xor,Find The Original Array of Prefix Xor,5,0,1,1,1.0000,1,0.5819,0.9171,0.5819,0.9171
+s2455_average_value_of_even_numbers_that_are_divisible_by_three,Average Value of Even Numbers That Are Divisible by Three,5,0,1,1,1.0000,3,0.6090,0.9650,0.6090,0.9650
+s2412_minimum_money_required_before_transactions,Minimum Money Required Before Transactions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2404_most_frequent_even_element,Most Frequent Even Element,5,1,5,1,1.0000,0,0.5084,0.8871,0.5084,0.8871
+s2443_sum_of_number_and_its_reverse,Sum of Number and Its Reverse,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2452_words_within_two_edits_of_dictionary,Words Within Two Edits of Dictionary,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2423_remove_letter_to_equalize_frequency,Remove Letter To Equalize Frequency,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2484_count_palindromic_subsequences,Count Palindromic Subsequences,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2468_split_message_based_on_limit,Split Message Based on Limit,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2466_count_ways_to_build_good_strings,Count Ways To Build Good Strings,5,1,2,1,1.0000,0,0.2696,0.8410,0.2696,0.8410
+s2461_maximum_sum_of_distinct_subarrays_with_length_k,Maximum Sum of Distinct Subarrays With Length K,5,0,1,1,1.0000,1,0.4746,0.8880,0.4746,0.8880
+s2427_number_of_common_factors,Number of Common Factors,5,1,5,1,1.0000,0,0.8620,0.8612,0.8620,0.8612
+s2470_number_of_subarrays_with_lcm_equal_to_k,Number of Subarrays With LCM Equal to K,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2499_minimum_total_cost_to_make_arrays_unequal,Minimum Total Cost to Make Arrays Unequal,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2434_using_a_robot_to_print_the_lexicographically_smallest_string,Using a Robot to Print the Lexicographically Smallest String,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s2441_largest_positive_integer_that_exists_with_its_negative,Largest Positive Integer That Exists With Its Negative,5,0,1,1,1.0000,3,0.3222,0.7827,0.3222,0.7827
+s2487_remove_nodes_from_linked_list,Remove Nodes From Linked List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1675_minimize_deviation_in_array,Minimize Deviation in Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1663_smallest_string_with_a_given_numeric_value,Smallest String With A Given Numeric Value,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1672_richest_customer_wealth,Richest Customer Wealth,5,1,5,1,1.0000,0,0.5433,0.9464,0.5433,0.9464
+s1659_maximize_grid_happiness,Maximize Grid Happiness,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1687_delivering_boxes_from_storage_to_ports,Delivering Boxes from Storage to Ports,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1630_arithmetic_subarrays,Arithmetic Subarrays,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1681_minimum_incompatibility,Minimum Incompatibility,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1616_split_two_strings_to_make_palindrome,Split Two Strings to Make Palindrome,5,0,1,1,1.0000,1,0.3951,0.8069,0.3951,0.8069
+s1655_distribute_repeating_integers,Distribute Repeating Integers,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1605_find_valid_matrix_given_row_and_column_sums,Find Valid Matrix Given Row and Column Sums,5,1,5,1,1.0000,0,0.4428,0.8809,0.4428,0.8809
+s1649_create_sorted_array_through_instructions,Create Sorted Array through Instructions,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1695_maximum_erasure_value,Maximum Erasure Value,5,0,1,1,1.0000,2,0.3419,0.7953,0.3419,0.7953
+s1673_find_the_most_competitive_subsequence,Find the Most Competitive Subsequence,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1609_even_odd_tree,Even Odd Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1619_mean_of_array_after_removing_some_elements,Mean of Array After Removing Some Elements,5,1,3,1,1.0000,0,0.5202,0.8319,0.5202,0.8319
+s1640_check_array_formation_through_concatenation,Check Array Formation Through Concatenation,5,0,1,1,1.0000,2,0.3688,0.7660,0.3688,0.7660
+s1638_count_substrings_that_differ_by_one_character,Count Substrings That Differ by One Character,5,0,1,1,1.0000,1,0.3536,0.8555,0.3536,0.8555
+s1643_kth_smallest_instructions,Kth Smallest Instructions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1678_goal_parser_interpretation,Goal Parser Interpretation,5,1,5,1,1.0000,0,0.1263,0.7122,0.1263,0.7122
+s1632_rank_transform_of_a_matrix,Rank Transform of a Matrix,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1636_sort_array_by_increasing_frequency,Sort Array by Increasing Frequency,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1679_max_number_of_k_sum_pairs,Max Number of K-Sum Pairs,5,0,2,1,1.0000,2,0.7965,0.9763,0.7965,0.9763
+s1627_graph_connectivity_with_threshold,Graph Connectivity With Threshold,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1639_number_of_ways_to_form_a_target_string_given_a_dictionary,Number of Ways to Form a Target String Given a Dictionary,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1685_sum_of_absolute_differences_in_a_sorted_array,Sum of Absolute Differences in a Sorted Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1689_partitioning_into_minimum_number_of_deci_binary_numbers,Partitioning Into Minimum Number Of Deci-Binary Numbers,5,0,3,0,0.0000,2,0.3599,0.9134,0.3599,0.9134
+s1617_count_subtrees_with_max_distance_between_cities,Count Subtrees With Max Distance Between Cities,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1647_minimum_deletions_to_make_character_frequencies_unique,Minimum Deletions to Make Character Frequencies Unique,5,0,1,1,1.0000,3,0.3425,0.8153,0.3425,0.8153
+s1696_jump_game_vi,Jump Game VI,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1669_merge_in_between_linked_lists,Merge In Between Linked Lists,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1625_lexicographically_smallest_string_after_applying_operations,Lexicographically Smallest String After Applying Operations,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1610_maximum_number_of_visible_points,Maximum Number of Visible Points,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1652_defuse_the_bomb,Defuse the Bomb,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1680_concatenation_of_consecutive_binary_numbers,Concatenation of Consecutive Binary Numbers,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1654_minimum_jumps_to_reach_home,Minimum Jumps to Reach Home,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1620_coordinate_with_maximum_network_quality,Coordinate With Maximum Network Quality,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1646_get_maximum_in_generated_array,Get Maximum in Generated Array,5,0,1,1,1.0000,4,0.5131,0.9046,0.5131,0.9046
+s1657_determine_if_two_strings_are_close,Determine if Two Strings Are Close,5,0,1,1,1.0000,3,0.3606,0.8037,0.3606,0.8037
+s1664_ways_to_make_a_fair_array,Ways to Make a Fair Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1662_check_if_two_string_arrays_are_equivalent,Check If Two String Arrays are Equivalent,5,1,5,1,1.0000,0,0.6968,0.8845,0.6968,0.8845
+s1671_minimum_number_of_removals_to_make_mountain_array,Minimum Number of Removals to Make Mountain Array,5,0,1,1,1.0000,1,0.3173,0.8625,0.3173,0.8625
+s1631_path_with_minimum_effort,Path With Minimum Effort,5,0,2,1,1.0000,1,0.2591,0.7753,0.2591,0.7753
+s1700_number_of_students_unable_to_eat_lunch,Number of Students Unable to Eat Lunch,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1621_number_of_sets_of_k_non_overlapping_line_segments,Number of Sets of K Non-Overlapping Line Segments,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1690_stone_game_vii,Stone Game VII,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1642_furthest_building_you_can_reach,Furthest Building You Can Reach,5,1,2,1,1.0000,0,0.4409,0.8320,0.4409,0.8320
+s1606_find_servers_that_handled_most_number_of_requests,Find Servers That Handled Most Number of Requests,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1668_maximum_repeating_substring,Maximum Repeating Substring,5,1,2,1,1.0000,0,0.4792,0.8177,0.4792,0.8177
+s1665_minimum_initial_energy_to_finish_tasks,Minimum Initial Energy to Finish Tasks,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1686_stone_game_vi,Stone Game VI,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1697_checking_existence_of_edge_length_limited_paths,Checking Existence of Edge Length Limited Paths,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1601_maximum_number_of_achievable_transfer_requests,Maximum Number of Achievable Transfer Requests,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1611_minimum_one_bit_operations_to_make_integers_zero,Minimum One Bit Operations to Make Integers Zero,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1637_widest_vertical_area_between_two_points_containing_no_points,Widest Vertical Area Between Two Points Containing No Points,5,1,5,1,1.0000,0,0.3802,0.8399,0.3802,0.8399
+s1624_largest_substring_between_two_equal_characters,Largest Substring Between Two Equal Characters,5,1,5,1,1.0000,0,0.7086,0.8801,0.7086,0.8801
+s1658_minimum_operations_to_reduce_x_to_zero,Minimum Operations to Reduce X to Zero,5,0,1,1,1.0000,4,0.3953,0.7969,0.3953,0.7969
+s1614_maximum_nesting_depth_of_the_parentheses,Maximum Nesting Depth of the Parentheses,5,1,4,1,1.0000,0,0.7782,0.8976,0.7782,0.8976
+s1688_count_of_matches_in_tournament,Count of Matches in Tournament,5,1,4,1,1.0000,0,0.1758,0.7845,0.1758,0.7845
+s1641_count_sorted_vowel_strings,Count Sorted Vowel Strings,5,1,1,1,1.0000,0,0.3343,0.8068,0.3343,0.8068
+s1608_special_array_with_x_elements_greater_than_or_equal_x,Special Array With X Elements Greater Than or Equal X,5,0,1,0,0.0000,4,0.3933,0.8324,0.3933,0.8324
+s1653_minimum_deletions_to_make_string_balanced,Minimum Deletions to Make String Balanced,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1626_best_team_with_no_conflicts,Best Team With No Conflicts,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1684_count_the_number_of_consistent_strings,Count the Number of Consistent Strings,5,1,5,1,1.0000,0,0.4537,0.8851,0.4537,0.8851
+s1604_alert_using_same_key_card_three_or_more_times_in_a_one_hour_period,Alert Using Same Key-Card Three or More Times in a One Hour Period,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1691_maximum_height_by_stacking_cuboids,Maximum Height by Stacking Cuboids,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1694_reformat_phone_number,Reformat Phone Number,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1648_sell_diminishing_valued_colored_balls,Sell Diminishing-Valued Colored Balls,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1615_maximal_network_rank,Maximal Network Rank,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1629_slowest_key,Slowest Key,5,1,4,1,1.0000,0,0.4407,0.8880,0.4407,0.8880
+s1674_minimum_moves_to_make_array_complementary,Minimum Moves to Make Array Complementary,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0696_count_binary_substrings,Count Binary Substrings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0691_stickers_to_spell_word,Stickers to Spell Word,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0643_maximum_average_subarray_i,Maximum Average Subarray I,5,1,5,1,1.0000,0,0.3947,0.8178,0.3947,0.8178
+s0693_binary_number_with_alternating_bits,Binary Number with Alternating Bits,5,1,4,1,1.0000,0,0.4193,0.8270,0.4193,0.8270
+s0689_maximum_sum_of_3_non_overlapping_subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0675_cut_off_trees_for_golf_event,Cut Off Trees for Golf Event,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0647_palindromic_substrings,Palindromic Substrings,5,1,4,1,1.0000,0,0.3744,0.8325,0.3744,0.8325
+s0669_trim_a_binary_search_tree,Trim a Binary Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0653_two_sum_iv_input_is_a_bst,Two Sum IV - Input is a BST,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0639_decode_ways_ii,Decode Ways II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0628_maximum_product_of_three_numbers,Maximum Product of Three Numbers,5,1,2,1,1.0000,0,0.1583,0.7270,0.1583,0.7270
+s0679_24_game,24 Game,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0668_kth_smallest_number_in_multiplication_table,Kth Smallest Number in Multiplication Table,5,1,3,1,1.0000,0,0.4759,0.8110,0.4759,0.8110
+s0699_falling_squares,Falling Squares,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0664_strange_printer,Strange Printer,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0648_replace_words,Replace Words,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0629_k_inverse_pairs_array,K Inverse Pairs Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0646_maximum_length_of_pair_chain,Maximum Length of Pair Chain,5,1,5,1,1.0000,0,0.3136,0.7989,0.3136,0.7989
+s0672_bulb_switcher_ii,Bulb Switcher II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0652_find_duplicate_subtrees,Find Duplicate Subtrees,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0654_maximum_binary_tree,Maximum Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0609_find_duplicate_file_in_system,Find Duplicate File in System,5,1,1,1,1.0000,0,0.4835,0.8638,0.4835,0.8638
+s0690_employee_importance,Employee Importance,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0673_number_of_longest_increasing_subsequence,Number of Longest Increasing Subsequence,5,0,1,1,1.0000,3,0.4288,0.9000,0.4288,0.9000
+s0700_search_in_a_binary_search_tree,Search in a Binary Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0650_2_keys_keyboard,2 Keys Keyboard,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0640_solve_the_equation,Solve the Equation,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0685_redundant_connection_ii,Redundant Connection II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0645_set_mismatch,Set Mismatch,5,1,3,1,1.0000,0,0.3517,0.8796,0.3517,0.8796
+s0621_task_scheduler,Task Scheduler,5,1,3,1,1.0000,0,0.4293,0.7875,0.4293,0.7875
+s0686_repeated_string_match,Repeated String Match,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0630_course_schedule_iii,Course Schedule III,5,1,4,1,1.0000,0,0.5020,0.7804,0.5020,0.7804
+s0671_second_minimum_node_in_a_binary_tree,Second Minimum Node In a Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0688_knight_probability_in_chessboard,Knight Probability in Chessboard,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0674_longest_continuous_increasing_subsequence,Longest Continuous Increasing Subsequence,5,1,5,1,1.0000,0,0.4837,0.8992,0.4837,0.8992
+s0637_average_of_levels_in_binary_tree,Average of Levels in Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0605_can_place_flowers,Can Place Flowers,5,1,5,1,1.0000,0,0.4605,0.8557,0.4605,0.8557
+s0682_baseball_game,Baseball Game,5,1,4,1,1.0000,0,0.3549,0.7964,0.3549,0.7964
+s0659_split_array_into_consecutive_subsequences,Split Array into Consecutive Subsequences,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0695_max_area_of_island,Max Area of Island,5,1,5,1,1.0000,0,0.4858,0.9215,0.4858,0.9215
+s0649_dota2_senate,Dota2 Senate,5,0,1,1,1.0000,4,0.3081,0.7614,0.3081,0.7614
+s0697_degree_of_an_array,Degree of an Array,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0617_merge_two_binary_trees,Merge Two Binary Trees,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0633_sum_of_square_numbers,Sum of Square Numbers,5,1,5,1,1.0000,0,0.2762,0.8110,0.2762,0.8110
+s0678_valid_parenthesis_string,Valid Parenthesis String,5,1,2,1,1.0000,0,0.4298,0.9275,0.4298,0.9275
+s0680_valid_palindrome_ii,Valid Palindrome II,5,1,5,1,1.0000,0,0.5153,0.8602,0.5153,0.8602
+s0606_construct_string_from_binary_tree,Construct String from Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0611_valid_triangle_number,Valid Triangle Number,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0632_smallest_range_covering_elements_from_k_lists,Smallest Range Covering Elements from K Lists,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0638_shopping_offers,Shopping Offers,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0670_maximum_swap,Maximum Swap,5,1,2,1,1.0000,0,0.3430,0.7999,0.3430,0.7999
+s0698_partition_to_k_equal_sum_subsets,Partition to K Equal Sum Subsets,5,1,3,1,1.0000,0,0.3595,0.7882,0.3595,0.7882
+s0661_image_smoother,Image Smoother,5,1,4,1,1.0000,0,0.2921,0.8092,0.2921,0.8092
+s0636_exclusive_time_of_functions,Exclusive Time of Functions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0687_longest_univalue_path,Longest Univalue Path,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0658_find_k_closest_elements,Find K Closest Elements,5,1,4,1,1.0000,0,0.7678,0.8747,0.7678,0.8747
+s0657_robot_return_to_origin,Robot Return to Origin,5,1,5,1,1.0000,0,0.2832,0.7557,0.2832,0.7557
+s0655_print_binary_tree,Print Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0667_beautiful_arrangement_ii,Beautiful Arrangement II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0623_add_one_row_to_tree,Add One Row to Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0665_non_decreasing_array,Non-decreasing Array,5,1,4,1,1.0000,0,0.5639,0.9258,0.5639,0.9258
+s0662_maximum_width_of_binary_tree,Maximum Width of Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0684_redundant_connection,Redundant Connection,5,1,3,1,1.0000,0,0.4145,0.7997,0.4145,0.7997
+s0114_flatten_binary_tree_to_linked_list,Flatten Binary Tree to Linked List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0692_top_k_frequent_words,Top K Frequent Words,5,1,3,1,1.0000,0,0.3987,0.7861,0.3987,0.7861
+s0112_path_sum,Path Sum,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0191_number_of_1_bits,Number of 1 Bits,5,1,5,1,1.0000,0,0.2826,0.7602,0.2826,0.7602
+s0154_find_minimum_in_rotated_sorted_array_ii,Find Minimum in Rotated Sorted Array II,5,1,5,1,1.0000,0,0.3506,0.9035,0.3506,0.9035
+s0111_minimum_depth_of_binary_tree,Minimum Depth of Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0151_reverse_words_in_a_string,Reverse Words in a String,5,1,2,1,1.0000,0,0.2840,0.7832,0.2840,0.7832
+s0141_linked_list_cycle,Linked List Cycle,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0179_largest_number,Largest Number,5,1,4,1,1.0000,0,0.4883,0.8104,0.4883,0.8104
+s0188_best_time_to_buy_and_sell_stock_iv,Best Time to Buy and Sell Stock IV,5,1,2,1,1.0000,0,0.3573,0.8502,0.3573,0.8502
+s0189_rotate_array,Rotate Array,5,1,4,1,1.0000,0,0.5075,0.8904,0.5075,0.8904
+s0110_balanced_binary_tree,Balanced Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0162_find_peak_element,Find Peak Element,5,1,5,1,1.0000,0,0.7064,0.9181,0.7064,0.9181
+s0129_sum_root_to_leaf_numbers,Sum Root to Leaf Numbers,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0174_dungeon_game,Dungeon Game,5,0,1,1,1.0000,1,0.3642,0.8413,0.3642,0.8413
+s0124_binary_tree_maximum_path_sum,Binary Tree Maximum Path Sum,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0190_reverse_bits,Reverse Bits,5,1,5,1,1.0000,0,0.5387,0.9451,0.5387,0.9451
+s0137_single_number_ii,Single Number II,5,1,5,1,1.0000,0,0.5751,0.8373,0.5751,0.8373
+s0164_maximum_gap,Maximum Gap,5,1,5,1,1.0000,0,0.5859,0.9483,0.5859,0.9483
+s0140_word_break_ii,Word Break II,5,0,1,1,1.0000,1,0.4007,0.8053,0.4007,0.8053
+s0172_factorial_trailing_zeroes,Factorial Trailing Zeroes,5,1,5,1,1.0000,0,0.5515,0.9683,0.5515,0.9683
+s0169_majority_element,Majority Element,5,1,5,1,1.0000,0,0.2450,0.7700,0.2450,0.7700
+s0135_candy,Candy,5,0,1,1,1.0000,2,0.4322,0.8914,0.4322,0.8914
+s0147_insertion_sort_list,Insertion Sort List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0119_pascals_triangle_ii,Pascal's Triangle II,5,0,1,1,1.0000,3,0.2459,0.7704,0.2459,0.7704
+s0133_clone_graph,Clone Graph,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0167_two_sum_ii_input_array_is_sorted,Two Sum II - Input Array Is Sorted,5,1,5,1,1.0000,0,0.3758,0.9199,0.3758,0.9199
+s0103_binary_tree_zigzag_level_order_traversal,Binary Tree Zigzag Level Order Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0200_number_of_islands,Number of Islands,5,1,5,1,1.0000,0,0.5196,0.7941,0.5196,0.7941
+s0120_triangle,Triangle,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0165_compare_version_numbers,Compare Version Numbers,5,1,5,1,1.0000,0,0.1892,0.7998,0.1892,0.7998
+s0127_word_ladder,Word Ladder,5,1,5,1,1.0000,0,0.3725,0.8060,0.3725,0.8060
+s0199_binary_tree_right_side_view,Binary Tree Right Side View,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0113_path_sum_ii,Path Sum II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0149_max_points_on_a_line,Max Points on a Line,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0116_populating_next_right_pointers_in_each_node,Populating Next Right Pointers in Each Node,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0136_single_number,Single Number,5,1,5,1,1.0000,0,0.7269,0.7844,0.7269,0.7844
+s0130_surrounded_regions,Surrounded Regions,5,1,4,1,1.0000,0,0.4559,0.8466,0.4559,0.8466
+s0105_construct_binary_tree_from_preorder_and_inorder_traversal,Construct Binary Tree from Preorder and Inorder Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0118_pascals_triangle,Pascal's Triangle,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0139_word_break,Word Break,5,1,5,1,1.0000,0,0.2585,0.7775,0.2585,0.7775
+s0132_palindrome_partitioning_ii,Palindrome Partitioning II,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0150_evaluate_reverse_polish_notation,Evaluate Reverse Polish Notation,5,1,5,1,1.0000,0,0.3955,0.7721,0.3955,0.7721
+s0122_best_time_to_buy_and_sell_stock_ii,Best Time to Buy and Sell Stock II,5,1,2,1,1.0000,0,0.4581,0.7987,0.4581,0.7987
+s0102_binary_tree_level_order_traversal,Binary Tree Level Order Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0145_binary_tree_postorder_traversal,Binary Tree Postorder Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0198_house_robber,House Robber,5,1,4,1,1.0000,0,0.5288,0.7886,0.5288,0.7886
+s0171_excel_sheet_column_number,Excel Sheet Column Number,5,1,5,1,1.0000,0,0.3430,0.8105,0.3430,0.8105
+s0106_construct_binary_tree_from_inorder_and_postorder_traversal,Construct Binary Tree from Inorder and Postorder Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0187_repeated_dna_sequences,Repeated DNA Sequences,5,1,2,1,1.0000,0,0.1635,0.7475,0.1635,0.7475
+s0142_linked_list_cycle_ii,Linked List Cycle II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0152_maximum_product_subarray,Maximum Product Subarray,5,1,4,1,1.0000,0,0.5214,0.8022,0.5214,0.8022
+s0123_best_time_to_buy_and_sell_stock_iii,Best Time to Buy and Sell Stock III,5,1,5,1,1.0000,0,0.5952,0.9136,0.5952,0.9136
+s0153_find_minimum_in_rotated_sorted_array,Find Minimum in Rotated Sorted Array,5,1,5,1,1.0000,0,0.3298,0.9022,0.3298,0.9022
+s0168_excel_sheet_column_title,Excel Sheet Column Title,5,1,4,1,1.0000,0,0.6036,0.8633,0.6036,0.8633
+s0107_binary_tree_level_order_traversal_ii,Binary Tree Level Order Traversal II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0115_distinct_subsequences,Distinct Subsequences,5,0,2,1,1.0000,1,0.2199,0.7778,0.2199,0.7778
+s0160_intersection_of_two_linked_lists,Intersection of Two Linked Lists,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0125_valid_palindrome,Valid Palindrome,5,1,4,1,1.0000,0,0.2732,0.7627,0.2732,0.7627
+s0121_best_time_to_buy_and_sell_stock,Best Time to Buy and Sell Stock,5,1,4,1,1.0000,0,0.6304,0.9607,0.6304,0.9607
+s0109_convert_sorted_list_to_binary_search_tree,Convert Sorted List to Binary Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0108_convert_sorted_array_to_binary_search_tree,Convert Sorted Array to Binary Search Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0104_maximum_depth_of_binary_tree,Maximum Depth of Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0128_longest_consecutive_sequence,Longest Consecutive Sequence,5,1,4,1,1.0000,0,0.2264,0.7542,0.2264,0.7542
+s0131_palindrome_partitioning,Palindrome Partitioning,5,1,5,1,1.0000,0,0.5536,0.8437,0.5536,0.8437
+s0101_symmetric_tree,Symmetric Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0126_word_ladder_ii,Word Ladder II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0143_reorder_list,Reorder List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0148_sort_list,Sort List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0117_populating_next_right_pointers_in_each_node_ii,Populating Next Right Pointers in Each Node II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0134_gas_station,Gas Station,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0138_copy_list_with_random_pointer,Copy List with Random Pointer,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s0166_fraction_to_recurring_decimal,Fraction to Recurring Decimal,5,1,2,1,1.0000,0,0.4516,0.8352,0.4516,0.8352
+s0144_binary_tree_preorder_traversal,Binary Tree Preorder Traversal,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1109_corporate_flight_bookings,Corporate Flight Bookings,5,0,2,1,1.0000,2,0.8051,0.8919,0.8051,0.8919
+s1187_make_array_strictly_increasing,Make Array Strictly Increasing,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1185_day_of_the_week,Day of the Week,5,0,2,1,1.0000,1,0.1696,0.7568,0.1696,0.7568
+s1189_maximum_number_of_balloons,Maximum Number of Balloons,5,0,1,1,1.0000,2,0.2876,0.7582,0.2876,0.7582
+s1156_swap_for_longest_repeated_character_substring,Swap For Longest Repeated Character Substring,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1105_filling_bookcase_shelves,Filling Bookcase Shelves,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1186_maximum_subarray_sum_with_one_deletion,Maximum Subarray Sum with One Deletion,5,0,1,1,1.0000,3,0.4096,0.8230,0.4096,0.8230
+s1110_delete_nodes_and_return_forest,Delete Nodes And Return Forest,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1162_as_far_from_land_as_possible,As Far from Land as Possible,5,0,1,1,1.0000,2,0.4083,0.8399,0.4083,0.8399
+s1144_decrease_elements_to_make_array_zigzag,Decrease Elements To Make Array Zigzag,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1177_can_make_palindrome_from_substring,Can Make Palindrome from Substring,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1145_binary_tree_coloring_game,Binary Tree Coloring Game,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1140_stone_game_ii,Stone Game II,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1125_smallest_sufficient_team,Smallest Sufficient Team,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1130_minimum_cost_tree_from_leaf_values,Minimum Cost Tree From Leaf Values,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1124_longest_well_performing_interval,Longest Well-Performing Interval,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1161_maximum_level_sum_of_a_binary_tree,Maximum Level Sum of a Binary Tree,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1154_day_of_the_year,Day of the Year,5,1,3,1,1.0000,0,0.0959,0.7138,0.0959,0.7138
+s1108_defanging_an_ip_address,Defanging an IP Address,5,1,5,1,1.0000,0,0.8594,0.8609,0.8594,0.8609
+s1106_parsing_a_boolean_expression,Parsing A Boolean Expression,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1155_number_of_dice_rolls_with_target_sum,Number of Dice Rolls With Target Sum,5,0,1,1,1.0000,1,0.3642,0.7979,0.3642,0.7979
+s1163_last_substring_in_lexicographical_order,Last Substring in Lexicographical Order,5,0,2,1,1.0000,1,0.3007,0.8086,0.3007,0.8086
+s1175_prime_arrangements,Prime Arrangements,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1128_number_of_equivalent_domino_pairs,Number of Equivalent Domino Pairs,5,1,3,1,1.0000,0,0.4860,0.8470,0.4860,0.8470
+s1123_lowest_common_ancestor_of_deepest_leaves,Lowest Common Ancestor of Deepest Leaves,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1191_k_concatenation_maximum_sum,K-Concatenation Maximum Sum,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1200_minimum_absolute_difference,Minimum Absolute Difference,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1169_invalid_transactions,Invalid Transactions,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1137_n_th_tribonacci_number,N-th Tribonacci Number,5,1,5,1,1.0000,0,0.3929,0.7965,0.3929,0.7965
+s1104_path_in_zigzag_labelled_binary_tree,Path In Zigzag Labelled Binary Tree,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1122_relative_sort_array,Relative Sort Array,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1190_reverse_substrings_between_each_pair_of_parentheses,Reverse Substrings Between Each Pair of Parentheses,5,1,3,1,1.0000,0,0.2653,0.7786,0.2653,0.7786
+s1143_longest_common_subsequence,Longest Common Subsequence,5,1,5,1,1.0000,0,0.6492,0.8280,0.6492,0.8280
+s1178_number_of_valid_words_for_each_puzzle,Number of Valid Words for Each Puzzle,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1139_largest_1_bordered_square,Largest 1-Bordered Square,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1147_longest_chunked_palindrome_decomposition,Longest Chunked Palindrome Decomposition,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1171_remove_zero_sum_consecutive_nodes_from_linked_list,Remove Zero Sum Consecutive Nodes from Linked List,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1129_shortest_path_with_alternating_colors,Shortest Path with Alternating Colors,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1160_find_words_that_can_be_formed_by_characters,Find Words That Can Be Formed by Characters,5,1,4,1,1.0000,0,0.5738,0.8521,0.5738,0.8521
+s1138_alphabet_board_path,Alphabet Board Path,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1131_maximum_of_absolute_value_expression,Maximum of Absolute Value Expression,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1103_distribute_candies_to_people,Distribute Candies to People,5,1,1,1,1.0000,0,0.4456,0.8298,0.4456,0.8298
+s1111_maximum_nesting_depth_of_two_valid_parentheses_strings,Maximum Nesting Depth of Two Valid Parentheses Strings,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1170_compare_strings_by_frequency_of_the_smallest_character,Compare Strings by Frequency of the Smallest Character,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1184_distance_between_bus_stops,Distance Between Bus Stops,5,0,2,1,1.0000,1,0.5243,0.8625,0.5243,0.8625
+s1192_critical_connections_in_a_network,Critical Connections in a Network,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1935_maximum_number_of_words_you_can_type,Maximum Number of Words You Can Type,5,0,2,0,0.0000,1,0.7489,0.8914,0.7489,0.8914
+s1941_check_if_all_characters_have_equal_number_of_occurrences,Check if All Characters Have Equal Number of Occurrences,5,1,5,1,1.0000,0,0.2433,0.7640,0.2433,0.7640
+s1967_number_of_strings_that_appear_as_substrings_in_word,Number of Strings That Appear as Substrings in Word,5,1,5,1,1.0000,0,0.7532,0.8692,0.7532,0.8692
+s1969_minimum_non_zero_product_of_the_array_elements,Minimum Non-Zero Product of the Array Elements,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1982_find_array_given_subset_sums,Find Array Given Subset Sums,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1961_check_if_string_is_a_prefix_of_array,Check If String Is a Prefix of Array,5,1,4,1,1.0000,0,0.6756,0.8554,0.6756,0.8554
+s1985_find_the_kth_largest_integer_in_the_array,Find the Kth Largest Integer in the Array,5,0,1,1,1.0000,2,0.2674,0.7656,0.2674,0.7656
+s1987_number_of_unique_good_subsequences,Number of Unique Good Subsequences,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1996_the_number_of_weak_characters_in_the_game,The Number of Weak Characters in the Game,5,1,3,1,1.0000,0,0.3946,0.8258,0.3946,0.8258
+s1920_build_array_from_permutation,Build Array from Permutation,5,1,5,1,1.0000,0,0.6815,0.9730,0.6815,0.9730
+s1909_remove_one_element_to_make_the_array_strictly_increasing,Remove One Element to Make the Array Strictly Increasing,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1962_remove_stones_to_minimize_the_total,Remove Stones to Minimize the Total,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1984_minimum_difference_between_highest_and_lowest_of_k_scores,Minimum Difference Between Highest and Lowest of K Scores,5,0,2,1,1.0000,3,0.5531,0.8551,0.5531,0.8551
+s1968_array_with_elements_not_equal_to_average_of_neighbors,Array With Elements Not Equal to Average of Neighbors,5,0,0,0,0.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1921_eliminate_maximum_number_of_monsters,Eliminate Maximum Number of Monsters,5,0,1,1,1.0000,2,0.4674,0.8547,0.4674,0.8547
+s1975_maximum_matrix_sum,Maximum Matrix Sum,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1963_minimum_number_of_swaps_to_make_the_string_balanced,Minimum Number of Swaps to Make the String Balanced,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1947_maximum_compatibility_score_sum,Maximum Compatibility Score Sum,5,0,1,1,1.0000,1,0.2596,0.7478,0.2596,0.7478
+s1964_find_the_longest_valid_obstacle_course_at_each_position,Find the Longest Valid Obstacle Course at Each Position,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1913_maximum_product_difference_between_two_pairs,Maximum Product Difference Between Two Pairs,5,1,5,1,1.0000,0,0.4524,0.8654,0.4524,0.8654
+s1901_find_a_peak_element_ii,Find a Peak Element II,5,0,2,1,1.0000,2,0.4417,0.8107,0.4417,0.8107
+s1914_cyclically_rotating_a_grid,Cyclically Rotating a Grid,5,0,0,1,1.0000,N/A,0.0000,0.0000,0.0000,0.0000
+s1929_concatenation_of_array,Concatenation of Array,5,1,5,1,1.0000,0,0.4760,0.9237,0.4760,0.9237

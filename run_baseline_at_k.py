@@ -191,13 +191,13 @@ def evaluate_single_problem(problem, model_chain, model_name, n_attempts=1, k_va
     c = sum(1 for a in attempts if a.get("pass"))
     n = n_attempts
     
-    # Calculate Pass@k metrics for all specified k values
-    pass_at_k = {}
-    for k in k_values:
-        if k <= n:
-            pass_at_k[f"pass@{k}"] = calculate_pass_at_k(n, c, k)
-        else:
-            pass_at_k[f"pass@{k}"] = 0.0
+    # Pass@k calculation temporarily disabled (not used in reports)
+    # pass_at_k = {}
+    # for k in k_values:
+    #     if k <= n:
+    #         pass_at_k[f"pass@{k}"] = calculate_pass_at_k(n, c, k)
+    #     else:
+    #         pass_at_k[f"pass@{k}"] = 0.0
 
     # First attempt result (temperature 0.0)
     first_attempt = attempts[0] if attempts else {}
@@ -209,8 +209,7 @@ def evaluate_single_problem(problem, model_chain, model_name, n_attempts=1, k_va
         "title": problem_data["title"],
         "n_samples": n,
         "c_correct": c,
-        # Pass@k metrics for all specified k values
-        **pass_at_k,
+        # Pass@k metrics temporarily omitted
         # Pass@1 equals first attempt success (override)
         "pass@1": 1.0 if pass_first else 0.0,
         # Details

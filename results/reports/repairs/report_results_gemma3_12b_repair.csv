@@ -1,0 +1,501 @@
+model_name,id,title,pass,pass_at_1,pass_at_k,compilable,repair_rounds,code_bleu,code_bert_f1
+gemma3:12b,s0840_magic_squares_in_grid,Magic Squares In Grid,True,1.0,1.0,True,0,0.2741,0.8098
+gemma3:12b,s0827_making_a_large_island,Making A Large Island,True,1.0,1.0,True,0,0.273,0.7928
+gemma3:12b,s0832_flipping_an_image,Flipping an Image,True,1.0,1.0,True,0,0.3187,0.7991
+gemma3:12b,s0821_shortest_distance_to_a_character,Shortest Distance to a Character,True,1.0,1.0,True,0,0.3467,0.8455
+gemma3:12b,s0878_nth_magical_number,Nth Magical Number,True,1.0,1.0,True,0,0.4429,0.8403
+gemma3:12b,s0874_walking_robot_simulation,Walking Robot Simulation,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0853_car_fleet,Car Fleet,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0849_maximize_distance_to_closest_person,Maximize Distance to Closest Person,True,1.0,1.0,True,0,0.2717,0.8072
+gemma3:12b,s0867_transpose_matrix,Transpose Matrix,True,1.0,1.0,True,0,0.4848,0.8381
+gemma3:12b,s0888_fair_candy_swap,Fair Candy Swap,True,1.0,1.0,True,0,0.4646,0.8928
+gemma3:12b,s0879_profitable_schemes,Profitable Schemes,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0884_uncommon_words_from_two_sentences,Uncommon Words from Two Sentences,True,1.0,1.0,True,0,0.6616,0.8983
+gemma3:12b,s0831_masking_personal_information,Masking Personal Information,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0890_find_and_replace_pattern,Find and Replace Pattern,True,1.0,1.0,True,0,0.4114,0.7957
+gemma3:12b,s0808_soup_servings,Soup Servings,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0846_hand_of_straights,Hand of Straights,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0845_longest_mountain_in_array,Longest Mountain in Array,True,1.0,1.0,True,0,0.4977,0.8399
+gemma3:12b,s0820_short_encoding_of_words,Short Encoding of Words,True,0.0,1.0,True,3,0.2465,0.7511
+gemma3:12b,s0862_shortest_subarray_with_sum_at_least_k,Shortest Subarray with Sum at Least K,True,1.0,1.0,True,0,0.4242,0.828
+gemma3:12b,s0837_new_21_game,New 21 Game,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0806_number_of_lines_to_write_string,Number of Lines To Write String,True,1.0,1.0,True,0,0.3175,0.8227
+gemma3:12b,s0816_ambiguous_coordinates,Ambiguous Coordinates,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0833_find_and_replace_in_string,Find And Replace in String,True,0.0,1.0,True,2,0.5275,0.8233
+gemma3:12b,s0803_bricks_falling_when_hit,Bricks Falling When Hit,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0810_chalkboard_xor_game,Chalkboard XOR Game,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0892_surface_area_of_3d_shapes,Surface Area of 3D Shapes,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0838_push_dominoes,Push Dominoes,True,1.0,1.0,True,0,0.2375,0.79
+gemma3:12b,s0844_backspace_string_compare,Backspace String Compare,True,1.0,1.0,True,0,0.4038,0.8002
+gemma3:12b,s0865_smallest_subtree_with_all_the_deepest_nodes,Smallest Subtree with all the Deepest Nodes,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0877_stone_game,Stone Game,True,1.0,1.0,True,0,0.3768,0.7609
+gemma3:12b,s0898_bitwise_ors_of_subarrays,Bitwise ORs of Subarrays,True,1.0,1.0,True,0,0.5786,0.9427
+gemma3:12b,s0817_linked_list_components,Linked List Components,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0871_minimum_number_of_refueling_stops,Minimum Number of Refueling Stops,True,1.0,1.0,True,0,0.5275,0.9226
+gemma3:12b,s0881_boats_to_save_people,Boats to Save People,True,1.0,1.0,True,0,0.6011,0.8658
+gemma3:12b,s0886_possible_bipartition,Possible Bipartition,True,1.0,1.0,True,0,0.3265,0.8054
+gemma3:12b,s0885_spiral_matrix_iii,Spiral Matrix III,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0872_leaf_similar_trees,Leaf-Similar Trees,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0826_most_profit_assigning_work,Most Profit Assigning Work,True,1.0,1.0,True,0,0.4263,0.7864
+gemma3:12b,s0807_max_increase_to_keep_city_skyline,Max Increase to Keep City Skyline,True,1.0,1.0,True,0,0.3502,0.8276
+gemma3:12b,s0829_consecutive_numbers_sum,Consecutive Numbers Sum,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0883_projection_area_of_3d_shapes,Projection Area of 3D Shapes,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0860_lemonade_change,Lemonade Change,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0869_reordered_power_of_2,Reordered Power of 2,True,1.0,1.0,True,0,0.3474,0.792
+gemma3:12b,s0897_increasing_order_search_tree,Increasing Order Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0812_largest_triangle_area,Largest Triangle Area,True,1.0,1.0,True,0,0.4023,0.8295
+gemma3:12b,s0852_peak_index_in_a_mountain_array,Peak Index in a Mountain Array,True,1.0,1.0,True,0,0.4893,0.8147
+gemma3:12b,s0824_goat_latin,Goat Latin,True,0.0,1.0,True,3,0.4893,0.8012
+gemma3:12b,s0899_orderly_queue,Orderly Queue,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0854_k_similar_strings,K-Similar Strings,True,1.0,1.0,True,0,0.3269,0.7903
+gemma3:12b,s0809_expressive_words,Expressive Words,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0866_prime_palindrome,Prime Palindrome,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0801_minimum_swaps_to_make_sequences_increasing,Minimum Swaps To Make Sequences Increasing,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0839_similar_string_groups,Similar String Groups,True,1.0,1.0,True,0,0.3819,0.8634
+gemma3:12b,s0848_shifting_letters,Shifting Letters,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0876_middle_of_the_linked_list,Middle of the Linked List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0828_count_unique_characters_of_all_substrings_of_a_given_string,Count Unique Characters of All Substrings of a Given String,True,1.0,1.0,True,0,0.1719,0.736
+gemma3:12b,s0875_koko_eating_bananas,Koko Eating Bananas,True,0.0,1.0,True,3,0.3904,0.8039
+gemma3:12b,s0893_groups_of_special_equivalent_strings,Groups of Special-Equivalent Strings,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0861_score_after_flipping_matrix,Score After Flipping Matrix,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0811_subdomain_visit_count,Subdomain Visit Count,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0804_unique_morse_code_words,Unique Morse Code Words,True,1.0,1.0,True,0,0.606,0.848
+gemma3:12b,s0850_rectangle_area_ii,Rectangle Area II,True,0.0,1.0,True,4,0.2862,0.7724
+gemma3:12b,s0834_sum_of_distances_in_tree,Sum of Distances in Tree,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0830_positions_of_large_groups,Positions of Large Groups,True,1.0,1.0,True,0,0.5594,0.8746
+gemma3:12b,s0859_buddy_strings,Buddy Strings,True,1.0,1.0,True,0,0.3795,0.8153
+gemma3:12b,s0863_all_nodes_distance_k_in_binary_tree,All Nodes Distance K in Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0835_image_overlap,Image Overlap,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0814_binary_tree_pruning,Binary Tree Pruning,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2381_shifting_letters_ii,Shifting Letters II,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2400_number_of_ways_to_reach_a_position_after_exactly_k_steps,Number of Ways to Reach a Position After Exactly k Steps,True,0.0,1.0,True,1,0.3563,0.8705
+gemma3:12b,s0870_advantage_shuffle,Advantage Shuffle,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2315_count_asterisks,Count Asterisks,True,1.0,1.0,True,0,0.3455,0.7893
+gemma3:12b,s2354_number_of_excellent_pairs,Number of Excellent Pairs,True,1.0,1.0,True,0,0.4148,0.8039
+gemma3:12b,s2365_task_scheduler_ii,Task Scheduler II,True,1.0,1.0,True,0,0.4569,0.832
+gemma3:12b,s2304_minimum_path_cost_in_a_grid,Minimum Path Cost in a Grid,True,1.0,1.0,True,0,0.5219,0.8667
+gemma3:12b,s2342_max_sum_of_a_pair_with_equal_sum_of_digits,Max Sum of a Pair With Equal Sum of Digits,True,1.0,1.0,True,0,0.5929,0.8856
+gemma3:12b,s2318_number_of_distinct_roll_sequences,Number of Distinct Roll Sequences,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2352_equal_row_and_column_pairs,Equal Row and Column Pairs,True,1.0,1.0,True,0,0.5536,0.8751
+gemma3:12b,s2316_count_unreachable_pairs_of_nodes_in_an_undirected_graph,Count Unreachable Pairs of Nodes in an Undirected Graph,True,1.0,1.0,True,0,0.3375,0.7841
+gemma3:12b,s2364_count_number_of_bad_pairs,Count Number of Bad Pairs,True,0.0,1.0,True,3,0.2972,0.7859
+gemma3:12b,s2385_amount_of_time_for_binary_tree_to_be_infected,Amount of Time for Binary Tree to Be Infected,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2359_find_closest_node_to_given_two_nodes,Find Closest Node to Given Two Nodes,True,1.0,1.0,True,0,0.3856,0.8062
+gemma3:12b,s2301_match_substring_after_replacement,Match Substring After Replacement,True,0.0,1.0,True,1,0.2777,0.7783
+gemma3:12b,s2350_shortest_impossible_sequence_of_rolls,Shortest Impossible Sequence of Rolls,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2398_maximum_number_of_robots_within_budget,Maximum Number of Robots Within Budget,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2327_number_of_people_aware_of_a_secret,Number of People Aware of a Secret,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2337_move_pieces_to_obtain_a_string,Move Pieces to Obtain a String,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2321_maximum_score_of_spliced_array,Maximum Score Of Spliced Array,True,1.0,1.0,True,0,0.3106,0.801
+gemma3:12b,s2366_minimum_replacements_to_sort_the_array,Minimum Replacements to Sort the Array,True,0.0,1.0,True,3,0.2717,0.8101
+gemma3:12b,s2383_minimum_hours_of_training_to_win_a_competition,Minimum Hours of Training to Win a Competition,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2305_fair_distribution_of_cookies,Fair Distribution of Cookies,True,0.0,1.0,True,1,0.4693,0.8231
+gemma3:12b,s2399_check_distances_between_same_letters,Check Distances Between Same Letters,True,1.0,1.0,True,0,0.4036,0.7872
+gemma3:12b,s2326_spiral_matrix_iv,Spiral Matrix IV,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2380_time_needed_to_rearrange_a_binary_string,Time Needed to Rearrange a Binary String,True,1.0,1.0,True,0,0.2523,0.7487
+gemma3:12b,s2391_minimum_amount_of_time_to_collect_garbage,Minimum Amount of Time to Collect Garbage,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2396_strictly_palindromic_number,Strictly Palindromic Number,True,1.0,1.0,True,0,0.3887,0.8171
+gemma3:12b,s2367_number_of_arithmetic_triplets,Number of Arithmetic Triplets,True,1.0,1.0,True,0,0.62,0.9394
+gemma3:12b,s2348_number_of_zero_filled_subarrays,Number of Zero-Filled Subarrays,True,1.0,1.0,True,0,0.5773,0.8503
+gemma3:12b,s2386_find_the_k_sum_of_an_array,Find the K-Sum of an Array,True,1.0,1.0,True,0,0.3087,0.8435
+gemma3:12b,s2334_subarray_with_elements_greater_than_varying_threshold,Subarray With Elements Greater Than Varying Threshold,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2374_node_with_highest_edge_score,Node With Highest Edge Score,True,0.0,1.0,True,1,0.3728,0.8097
+gemma3:12b,s2328_number_of_increasing_paths_in_a_grid,Number of Increasing Paths in a Grid,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2395_find_subarrays_with_equal_sum,Find Subarrays With Equal Sum,True,1.0,1.0,True,0,0.6263,0.9268
+gemma3:12b,s2357_make_array_zero_by_subtracting_equal_amounts,Make Array Zero by Subtracting Equal Amounts,True,0.0,1.0,True,2,0.3946,0.723
+gemma3:12b,s2302_count_subarrays_with_score_less_than_k,Count Subarrays With Score Less Than K,True,1.0,1.0,True,0,0.5686,0.9461
+gemma3:12b,s2306_naming_a_company,Naming a Company,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2344_minimum_deletions_to_make_array_divisible,Minimum Deletions to Make Array Divisible,True,1.0,1.0,True,0,0.4161,0.8288
+gemma3:12b,s2376_count_special_integers,Count Special Integers,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2322_minimum_score_after_removals_on_a_tree,Minimum Score After Removals on a Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2370_longest_ideal_subsequence,Longest Ideal Subsequence,True,1.0,1.0,True,0,0.2552,0.7796
+gemma3:12b,s2384_largest_palindromic_number,Largest Palindromic Number,True,0.0,1.0,True,3,0.2924,0.8004
+gemma3:12b,s2335_minimum_amount_of_time_to_fill_cups,Minimum Amount of Time to Fill Cups,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2369_check_if_there_is_a_valid_partition_for_the_array,Check if There is a Valid Partition For The Array,True,1.0,1.0,True,0,0.282,0.7943
+gemma3:12b,s2338_count_the_number_of_ideal_arrays,Count the Number of Ideal Arrays,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2382_maximum_segment_sum_after_removals,Maximum Segment Sum After Removals,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2325_decode_the_message,Decode the Message,True,1.0,1.0,True,0,0.4184,0.8294
+gemma3:12b,s2358_maximum_number_of_groups_entering_a_competition,Maximum Number of Groups Entering a Competition,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2360_longest_cycle_in_a_graph,Longest Cycle in a Graph,True,1.0,1.0,True,0,0.3706,0.8453
+gemma3:12b,s2309_greatest_english_letter_in_upper_and_lower_case,Greatest English Letter in Upper and Lower Case,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2351_first_letter_to_appear_twice,First Letter to Appear Twice,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2347_best_poker_hand,Best Poker Hand,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2390_removing_stars_from_a_string,Removing Stars From a String,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2303_calculate_amount_paid_in_taxes,Calculate Amount Paid in Taxes,True,1.0,1.0,True,0,0.4893,0.8046
+gemma3:12b,s2333_minimum_sum_of_squared_difference,Minimum Sum of Squared Difference,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2319_check_if_matrix_is_x_matrix,Check if Matrix Is X-Matrix,True,0.0,1.0,True,1,0.6014,0.8445
+gemma3:12b,s2397_maximum_rows_covered_by_columns,Maximum Rows Covered by Columns,True,1.0,1.0,True,0,0.3299,0.7608
+gemma3:12b,s2331_evaluate_boolean_binary_tree,Evaluate Boolean Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2363_merge_similar_items,Merge Similar Items,True,1.0,1.0,True,0,0.4183,0.8267
+gemma3:12b,s2312_selling_pieces_of_wood,Selling Pieces of Wood,True,1.0,1.0,True,0,0.3661,0.8359
+gemma3:12b,s2379_minimum_recolors_to_get_k_consecutive_black_blocks,Minimum Recolors to Get K Consecutive Black Blocks,True,1.0,1.0,True,0,0.4173,0.8226
+gemma3:12b,s2373_largest_local_values_in_a_matrix,Largest Local Values in a Matrix,True,1.0,1.0,True,0,0.6754,0.8817
+gemma3:12b,s2317_maximum_xor_after_operations,Maximum XOR After Operations,True,0.0,1.0,True,2,0.5183,0.8439
+gemma3:12b,s2341_maximum_number_of_pairs_in_array,Maximum Number of Pairs in Array,True,1.0,1.0,True,0,0.3396,0.8063
+gemma3:12b,s2310_sum_of_numbers_with_units_digit_k,Sum of Numbers With Units Digit K,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2343_query_kth_smallest_trimmed_number,Query Kth Smallest Trimmed Number,True,1.0,1.0,True,0,0.2791,0.7711
+gemma3:12b,s2392_build_a_matrix_with_conditions,Build a Matrix With Conditions,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2368_reachable_nodes_with_restrictions,Reachable Nodes With Restrictions,True,1.0,1.0,True,0,0.5052,0.834
+gemma3:12b,s2320_count_number_of_ways_to_place_houses,Count Number of Ways to Place Houses,True,0.0,1.0,True,1,0.242,0.7309
+gemma3:12b,s2375_construct_smallest_number_from_di_string,Construct Smallest Number From DI String,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2389_longest_subsequence_with_limited_sum,Longest Subsequence With Limited Sum,True,1.0,1.0,True,0,0.39,0.8074
+gemma3:12b,s2442_count_number_of_distinct_integers_after_reverse_operations,Count Number of Distinct Integers After Reverse Operations,True,1.0,1.0,True,0,0.6449,0.9357
+gemma3:12b,s2488_count_subarrays_with_median_k,Count Subarrays With Median K,True,1.0,1.0,True,0,0.2339,0.7776
+gemma3:12b,s2311_longest_binary_subsequence_less_than_or_equal_to_k,Longest Binary Subsequence Less Than or Equal to K,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2332_the_latest_time_to_catch_a_bus,The Latest Time to Catch a Bus,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2432_the_employee_that_worked_on_the_longest_task,The Employee That Worked on the Longest Task,True,1.0,1.0,True,0,0.4599,0.8067
+gemma3:12b,s2500_delete_greatest_value_in_each_row,Delete Greatest Value in Each Row,True,0.0,1.0,True,1,0.416,0.8104
+gemma3:12b,s2419_longest_subarray_with_maximum_bitwise_and,Longest Subarray With Maximum Bitwise AND,True,1.0,1.0,True,0,0.3592,0.8019
+gemma3:12b,s2490_circular_sentence,Circular Sentence,True,1.0,1.0,True,0,0.3608,0.8013
+gemma3:12b,s2415_reverse_odd_levels_of_binary_tree,Reverse Odd Levels of Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2405_optimal_partition_of_string,Optimal Partition of String,True,1.0,1.0,True,0,0.3268,0.7567
+gemma3:12b,s2475_number_of_unequal_triplets_in_array,Number of Unequal Triplets in Array,True,1.0,1.0,True,0,0.3552,0.7957
+gemma3:12b,s2447_number_of_subarrays_with_gcd_equal_to_k,Number of Subarrays With GCD Equal to K,True,1.0,1.0,True,0,0.5024,0.799
+gemma3:12b,s2413_smallest_even_multiple,Smallest Even Multiple,True,1.0,1.0,True,0,0.5839,0.8446
+gemma3:12b,s2482_difference_between_ones_and_zeros_in_row_and_column,Difference Between Ones and Zeros in Row and Column,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2449_minimum_number_of_operations_to_make_arrays_similar,Minimum Number of Operations to Make Arrays Similar,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2426_number_of_pairs_satisfying_inequality,Number of Pairs Satisfying Inequality,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2428_maximum_sum_of_an_hourglass,Maximum Sum of an Hourglass,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2463_minimum_total_distance_traveled,Minimum Total Distance Traveled,True,1.0,1.0,True,0,0.2321,0.7858
+gemma3:12b,s2446_determine_if_two_events_have_conflict,Determine if Two Events Have Conflict,True,1.0,1.0,True,0,0.1828,0.7386
+gemma3:12b,s2406_divide_intervals_into_minimum_number_of_groups,Divide Intervals Into Minimum Number of Groups,True,1.0,1.0,True,0,0.2379,0.7376
+gemma3:12b,s2451_odd_string_difference,Odd String Difference,True,0.0,1.0,True,3,0.2959,0.8143
+gemma3:12b,s2460_apply_operations_to_an_array,Apply Operations to an Array,True,1.0,1.0,True,0,0.5493,0.8667
+gemma3:12b,s2458_height_of_binary_tree_after_subtree_removal_queries,Height of Binary Tree After Subtree Removal Queries,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2430_maximum_deletions_on_a_string,Maximum Deletions on a String,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2411_smallest_subarrays_with_maximum_bitwise_or,Smallest Subarrays With Maximum Bitwise OR,True,1.0,1.0,True,0,0.3746,0.8656
+gemma3:12b,s2476_closest_nodes_queries_in_a_binary_search_tree,Closest Nodes Queries in a Binary Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2486_append_characters_to_string_to_make_subsequence,Append Characters to String to Make Subsequence,True,1.0,1.0,True,0,0.3385,0.7861
+gemma3:12b,s2462_total_cost_to_hire_k_workers,Total Cost to Hire K Workers,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2409_count_days_spent_together,Count Days Spent Together,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2492_minimum_score_of_a_path_between_two_cities,Minimum Score of a Path Between Two Cities,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2416_sum_of_prefix_scores_of_strings,Sum of Prefix Scores of Strings,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2456_most_popular_video_creator,Most Popular Video Creator,True,1.0,1.0,True,0,0.5507,0.8837
+gemma3:12b,s2401_longest_nice_subarray,Longest Nice Subarray,True,1.0,1.0,True,0,0.4736,0.8407
+gemma3:12b,s2453_destroy_sequential_targets,Destroy Sequential Targets,True,1.0,1.0,True,0,0.4214,0.8021
+gemma3:12b,s2425_bitwise_xor_of_all_pairings,Bitwise XOR of All Pairings,True,1.0,1.0,True,0,0.3912,0.8255
+gemma3:12b,s2410_maximum_matching_of_players_with_trainers,Maximum Matching of Players With Trainers,True,1.0,1.0,True,0,0.4469,0.7948
+gemma3:12b,s2497_maximum_star_sum_of_a_graph,Maximum Star Sum of a Graph,True,0.0,1.0,True,3,0.3662,0.7906
+gemma3:12b,s2435_paths_in_matrix_whose_sum_is_divisible_by_k,Paths in Matrix Whose Sum Is Divisible by K,True,1.0,1.0,True,0,0.3817,0.835
+gemma3:12b,s2471_minimum_number_of_operations_to_sort_a_binary_tree_by_level,Minimum Number of Operations to Sort a Binary Tree by Level,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2418_sort_the_people,Sort the People,True,1.0,1.0,True,0,0.2507,0.7219
+gemma3:12b,s2477_minimum_fuel_cost_to_report_to_the_capital,Minimum Fuel Cost to Report to the Capital,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2481_minimum_cuts_to_divide_a_circle,Minimum Cuts to Divide a Circle,True,0.0,1.0,True,2,0.625,0.8625
+gemma3:12b,s2420_find_all_good_indices,Find All Good Indices,True,1.0,1.0,True,0,0.4483,0.8956
+gemma3:12b,s2414_length_of_the_longest_alphabetical_continuous_substring,Length of the Longest Alphabetical Continuous Substring,True,1.0,1.0,True,0,0.4331,0.8213
+gemma3:12b,s2469_convert_the_temperature,Convert the Temperature,True,1.0,1.0,True,0,0.5652,0.8722
+gemma3:12b,s2498_frog_jump_ii,Frog Jump II,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2485_find_the_pivot_integer,Find the Pivot Integer,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2467_most_profitable_path_in_a_tree,Most Profitable Path in a Tree,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2472_maximum_number_of_non_overlapping_palindrome_substrings,Maximum Number of Non-overlapping Palindrome Substrings,True,0.0,1.0,True,4,0.3776,0.8078
+gemma3:12b,s2478_number_of_beautiful_partitions,Number of Beautiful Partitions,True,0.0,1.0,True,4,0.2642,0.8079
+gemma3:12b,s2491_divide_players_into_teams_of_equal_skill,Divide Players Into Teams of Equal Skill,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2448_minimum_cost_to_make_array_equal,Minimum Cost to Make Array Equal,True,1.0,1.0,True,0,0.4413,0.8213
+gemma3:12b,s2440_create_components_with_same_value,Create Components With Same Value,True,0.0,1.0,True,4,0.3355,0.7909
+gemma3:12b,s2483_minimum_penalty_for_a_shop,Minimum Penalty for a Shop,True,1.0,1.0,True,0,0.4613,0.813
+gemma3:12b,s2465_number_of_distinct_averages,Number of Distinct Averages,True,1.0,1.0,True,0,0.7344,0.9562
+gemma3:12b,s2437_number_of_valid_clock_times,Number of Valid Clock Times,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2407_longest_increasing_subsequence_ii,Longest Increasing Subsequence II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2439_minimize_maximum_of_array,Minimize Maximum of Array,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2457_minimum_addition_to_make_integer_beautiful,Minimum Addition to Make Integer Beautiful,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2496_maximum_value_of_a_string_in_an_array,Maximum Value of a String in an Array,True,0.0,1.0,True,1,0.3409,0.8001
+gemma3:12b,s2421_number_of_good_paths,Number of Good Paths,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2429_minimize_xor,Minimize XOR,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2454_next_greater_element_iv,Next Greater Element IV,True,0.0,1.0,True,3,0.2479,0.7704
+gemma3:12b,s2493_divide_nodes_into_the_maximum_number_of_groups,Divide Nodes Into the Maximum Number of Groups,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2402_meeting_rooms_iii,Meeting Rooms III,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2444_count_subarrays_with_fixed_bounds,Count Subarrays With Fixed Bounds,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2455_average_value_of_even_numbers_that_are_divisible_by_three,Average Value of Even Numbers That Are Divisible by Three,True,1.0,1.0,True,0,0.7967,0.8931
+gemma3:12b,s2438_range_product_queries_of_powers,Range Product Queries of Powers,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2404_most_frequent_even_element,Most Frequent Even Element,True,1.0,1.0,True,0,0.4946,0.8916
+gemma3:12b,s2443_sum_of_number_and_its_reverse,Sum of Number and Its Reverse,True,1.0,1.0,True,0,0.5841,0.833
+gemma3:12b,s2433_find_the_original_array_of_prefix_xor,Find The Original Array of Prefix Xor,True,0.0,1.0,True,4,0.5111,0.8659
+gemma3:12b,s2423_remove_letter_to_equalize_frequency,Remove Letter To Equalize Frequency,True,1.0,1.0,True,0,0.2354,0.7376
+gemma3:12b,s2412_minimum_money_required_before_transactions,Minimum Money Required Before Transactions,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2452_words_within_two_edits_of_dictionary,Words Within Two Edits of Dictionary,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s2466_count_ways_to_build_good_strings,Count Ways To Build Good Strings,True,1.0,1.0,True,0,0.3616,0.8505
+gemma3:12b,s2470_number_of_subarrays_with_lcm_equal_to_k,Number of Subarrays With LCM Equal to K,True,1.0,1.0,True,0,0.5616,0.8534
+gemma3:12b,s2461_maximum_sum_of_distinct_subarrays_with_length_k,Maximum Sum of Distinct Subarrays With Length K,True,0.0,1.0,True,1,0.4026,0.8274
+gemma3:12b,s2427_number_of_common_factors,Number of Common Factors,True,1.0,1.0,True,0,0.862,0.8612
+gemma3:12b,s2468_split_message_based_on_limit,Split Message Based on Limit,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2484_count_palindromic_subsequences,Count Palindromic Subsequences,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2434_using_a_robot_to_print_the_lexicographically_smallest_string,Using a Robot to Print the Lexicographically Smallest String,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s2441_largest_positive_integer_that_exists_with_its_negative,Largest Positive Integer That Exists With Its Negative,True,1.0,1.0,True,0,0.3405,0.8566
+gemma3:12b,s2499_minimum_total_cost_to_make_arrays_unequal,Minimum Total Cost to Make Arrays Unequal,True,0.0,1.0,True,3,0.32,0.776
+gemma3:12b,s2487_remove_nodes_from_linked_list,Remove Nodes From Linked List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1659_maximize_grid_happiness,Maximize Grid Happiness,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1663_smallest_string_with_a_given_numeric_value,Smallest String With A Given Numeric Value,True,1.0,1.0,True,0,0.4229,0.8285
+gemma3:12b,s1672_richest_customer_wealth,Richest Customer Wealth,True,1.0,1.0,True,0,0.495,0.8063
+gemma3:12b,s1630_arithmetic_subarrays,Arithmetic Subarrays,True,1.0,1.0,True,0,0.2871,0.8043
+gemma3:12b,s1687_delivering_boxes_from_storage_to_ports,Delivering Boxes from Storage to Ports,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1675_minimize_deviation_in_array,Minimize Deviation in Array,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1681_minimum_incompatibility,Minimum Incompatibility,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1655_distribute_repeating_integers,Distribute Repeating Integers,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1616_split_two_strings_to_make_palindrome,Split Two Strings to Make Palindrome,True,1.0,1.0,True,0,0.3249,0.8065
+gemma3:12b,s1695_maximum_erasure_value,Maximum Erasure Value,True,1.0,1.0,True,0,0.3808,0.7786
+gemma3:12b,s1673_find_the_most_competitive_subsequence,Find the Most Competitive Subsequence,True,1.0,1.0,True,0,0.372,0.876
+gemma3:12b,s1649_create_sorted_array_through_instructions,Create Sorted Array through Instructions,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1619_mean_of_array_after_removing_some_elements,Mean of Array After Removing Some Elements,True,1.0,1.0,True,0,0.6253,0.9575
+gemma3:12b,s1640_check_array_formation_through_concatenation,Check Array Formation Through Concatenation,True,1.0,1.0,True,0,0.4304,0.8023
+gemma3:12b,s1638_count_substrings_that_differ_by_one_character,Count Substrings That Differ by One Character,True,1.0,1.0,True,0,0.3149,0.7814
+gemma3:12b,s1609_even_odd_tree,Even Odd Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1678_goal_parser_interpretation,Goal Parser Interpretation,True,1.0,1.0,True,0,0.5061,0.8543
+gemma3:12b,s1643_kth_smallest_instructions,Kth Smallest Instructions,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1636_sort_array_by_increasing_frequency,Sort Array by Increasing Frequency,True,1.0,1.0,True,0,0.4521,0.8262
+gemma3:12b,s1679_max_number_of_k_sum_pairs,Max Number of K-Sum Pairs,True,1.0,1.0,True,0,0.7965,0.9767
+gemma3:12b,s1632_rank_transform_of_a_matrix,Rank Transform of a Matrix,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1605_find_valid_matrix_given_row_and_column_sums,Find Valid Matrix Given Row and Column Sums,True,0.0,1.0,True,4,0.4957,0.8621
+gemma3:12b,s1627_graph_connectivity_with_threshold,Graph Connectivity With Threshold,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1685_sum_of_absolute_differences_in_a_sorted_array,Sum of Absolute Differences in a Sorted Array,True,1.0,1.0,True,0,0.3454,0.7974
+gemma3:12b,s1689_partitioning_into_minimum_number_of_deci_binary_numbers,Partitioning Into Minimum Number Of Deci-Binary Numbers,True,1.0,1.0,True,0,0.3393,0.8079
+gemma3:12b,s1639_number_of_ways_to_form_a_target_string_given_a_dictionary,Number of Ways to Form a Target String Given a Dictionary,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1617_count_subtrees_with_max_distance_between_cities,Count Subtrees With Max Distance Between Cities,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1647_minimum_deletions_to_make_character_frequencies_unique,Minimum Deletions to Make Character Frequencies Unique,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1669_merge_in_between_linked_lists,Merge In Between Linked Lists,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1610_maximum_number_of_visible_points,Maximum Number of Visible Points,True,1.0,1.0,True,0,0.3036,0.8148
+gemma3:12b,s1652_defuse_the_bomb,Defuse the Bomb,True,1.0,1.0,True,0,0.3735,0.8417
+gemma3:12b,s1680_concatenation_of_consecutive_binary_numbers,Concatenation of Consecutive Binary Numbers,True,1.0,1.0,True,0,0.3425,0.8837
+gemma3:12b,s1696_jump_game_vi,Jump Game VI,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1620_coordinate_with_maximum_network_quality,Coordinate With Maximum Network Quality,True,1.0,1.0,True,0,0.3585,0.8382
+gemma3:12b,s1625_lexicographically_smallest_string_after_applying_operations,Lexicographically Smallest String After Applying Operations,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1646_get_maximum_in_generated_array,Get Maximum in Generated Array,True,1.0,1.0,True,0,0.5005,0.873
+gemma3:12b,s1664_ways_to_make_a_fair_array,Ways to Make a Fair Array,True,1.0,1.0,True,0,0.3324,0.84
+gemma3:12b,s1662_check_if_two_string_arrays_are_equivalent,Check If Two String Arrays are Equivalent,True,1.0,1.0,True,0,0.9347,0.9131
+gemma3:12b,s1654_minimum_jumps_to_reach_home,Minimum Jumps to Reach Home,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1671_minimum_number_of_removals_to_make_mountain_array,Minimum Number of Removals to Make Mountain Array,True,1.0,1.0,True,0,0.3162,0.8159
+gemma3:12b,s1657_determine_if_two_strings_are_close,Determine if Two Strings Are Close,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1631_path_with_minimum_effort,Path With Minimum Effort,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1690_stone_game_vii,Stone Game VII,True,1.0,1.0,True,0,0.4341,0.8278
+gemma3:12b,s1668_maximum_repeating_substring,Maximum Repeating Substring,True,1.0,1.0,True,0,0.4894,0.7856
+gemma3:12b,s1621_number_of_sets_of_k_non_overlapping_line_segments,Number of Sets of K Non-Overlapping Line Segments,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1642_furthest_building_you_can_reach,Furthest Building You Can Reach,True,1.0,1.0,True,0,0.6438,0.8964
+gemma3:12b,s1700_number_of_students_unable_to_eat_lunch,Number of Students Unable to Eat Lunch,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1665_minimum_initial_energy_to_finish_tasks,Minimum Initial Energy to Finish Tasks,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1686_stone_game_vi,Stone Game VI,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1697_checking_existence_of_edge_length_limited_paths,Checking Existence of Edge Length Limited Paths,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1601_maximum_number_of_achievable_transfer_requests,Maximum Number of Achievable Transfer Requests,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1637_widest_vertical_area_between_two_points_containing_no_points,Widest Vertical Area Between Two Points Containing No Points,True,1.0,1.0,True,0,0.6005,0.8825
+gemma3:12b,s1624_largest_substring_between_two_equal_characters,Largest Substring Between Two Equal Characters,True,1.0,1.0,True,0,0.543,0.8873
+gemma3:12b,s1658_minimum_operations_to_reduce_x_to_zero,Minimum Operations to Reduce X to Zero,True,1.0,1.0,True,0,0.324,0.8037
+gemma3:12b,s1688_count_of_matches_in_tournament,Count of Matches in Tournament,True,1.0,1.0,True,0,0.8585,0.8877
+gemma3:12b,s1606_find_servers_that_handled_most_number_of_requests,Find Servers That Handled Most Number of Requests,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1614_maximum_nesting_depth_of_the_parentheses,Maximum Nesting Depth of the Parentheses,True,1.0,1.0,True,0,0.5285,0.8523
+gemma3:12b,s1611_minimum_one_bit_operations_to_make_integers_zero,Minimum One Bit Operations to Make Integers Zero,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1608_special_array_with_x_elements_greater_than_or_equal_x,Special Array With X Elements Greater Than or Equal X,True,1.0,1.0,True,0,0.4696,0.8305
+gemma3:12b,s1653_minimum_deletions_to_make_string_balanced,Minimum Deletions to Make String Balanced,True,0.0,1.0,True,2,0.3835,0.7961
+gemma3:12b,s1684_count_the_number_of_consistent_strings,Count the Number of Consistent Strings,True,1.0,1.0,True,0,0.3733,0.7741
+gemma3:12b,s1626_best_team_with_no_conflicts,Best Team With No Conflicts,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1604_alert_using_same_key_card_three_or_more_times_in_a_one_hour_period,Alert Using Same Key-Card Three or More Times in a One Hour Period,True,0.0,1.0,True,2,0.5264,0.8413
+gemma3:12b,s1641_count_sorted_vowel_strings,Count Sorted Vowel Strings,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1648_sell_diminishing_valued_colored_balls,Sell Diminishing-Valued Colored Balls,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1691_maximum_height_by_stacking_cuboids,Maximum Height by Stacking Cuboids,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1629_slowest_key,Slowest Key,True,1.0,1.0,True,0,0.4376,0.8344
+gemma3:12b,s1694_reformat_phone_number,Reformat Phone Number,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1615_maximal_network_rank,Maximal Network Rank,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1674_minimum_moves_to_make_array_complementary,Minimum Moves to Make Array Complementary,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0643_maximum_average_subarray_i,Maximum Average Subarray I,True,1.0,1.0,True,0,0.4322,0.8157
+gemma3:12b,s0693_binary_number_with_alternating_bits,Binary Number with Alternating Bits,True,1.0,1.0,True,0,0.5627,0.8256
+gemma3:12b,s0691_stickers_to_spell_word,Stickers to Spell Word,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0696_count_binary_substrings,Count Binary Substrings,True,0.0,1.0,True,4,0.2937,0.7465
+gemma3:12b,s0647_palindromic_substrings,Palindromic Substrings,True,1.0,1.0,True,0,0.3011,0.8185
+gemma3:12b,s0689_maximum_sum_of_3_non_overlapping_subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0675_cut_off_trees_for_golf_event,Cut Off Trees for Golf Event,True,0.0,1.0,True,3,0.4207,0.8336
+gemma3:12b,s0669_trim_a_binary_search_tree,Trim a Binary Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0668_kth_smallest_number_in_multiplication_table,Kth Smallest Number in Multiplication Table,True,1.0,1.0,True,0,0.5431,0.8362
+gemma3:12b,s0628_maximum_product_of_three_numbers,Maximum Product of Three Numbers,True,1.0,1.0,True,0,0.166,0.7189
+gemma3:12b,s0653_two_sum_iv_input_is_a_bst,Two Sum IV - Input is a BST,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0639_decode_ways_ii,Decode Ways II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0648_replace_words,Replace Words,True,1.0,1.0,True,0,0.2139,0.7733
+gemma3:12b,s0699_falling_squares,Falling Squares,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0664_strange_printer,Strange Printer,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0646_maximum_length_of_pair_chain,Maximum Length of Pair Chain,True,1.0,1.0,True,0,0.4757,0.9084
+gemma3:12b,s0679_24_game,24 Game,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0629_k_inverse_pairs_array,K Inverse Pairs Array,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0652_find_duplicate_subtrees,Find Duplicate Subtrees,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0609_find_duplicate_file_in_system,Find Duplicate File in System,True,1.0,1.0,True,0,0.5943,0.8399
+gemma3:12b,s0654_maximum_binary_tree,Maximum Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0673_number_of_longest_increasing_subsequence,Number of Longest Increasing Subsequence,True,1.0,1.0,True,0,0.3812,0.8164
+gemma3:12b,s0672_bulb_switcher_ii,Bulb Switcher II,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0700_search_in_a_binary_search_tree,Search in a Binary Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0690_employee_importance,Employee Importance,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0640_solve_the_equation,Solve the Equation,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0645_set_mismatch,Set Mismatch,True,1.0,1.0,True,0,0.269,0.7878
+gemma3:12b,s0650_2_keys_keyboard,2 Keys Keyboard,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0685_redundant_connection_ii,Redundant Connection II,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0630_course_schedule_iii,Course Schedule III,True,1.0,1.0,True,0,0.4312,0.8323
+gemma3:12b,s0686_repeated_string_match,Repeated String Match,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0621_task_scheduler,Task Scheduler,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0674_longest_continuous_increasing_subsequence,Longest Continuous Increasing Subsequence,True,1.0,1.0,True,0,0.4305,0.8379
+gemma3:12b,s0688_knight_probability_in_chessboard,Knight Probability in Chessboard,True,0.0,1.0,True,1,0.2511,0.7947
+gemma3:12b,s0605_can_place_flowers,Can Place Flowers,True,1.0,1.0,True,0,0.4458,0.8694
+gemma3:12b,s0682_baseball_game,Baseball Game,True,1.0,1.0,True,0,0.4293,0.8472
+gemma3:12b,s0671_second_minimum_node_in_a_binary_tree,Second Minimum Node In a Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0659_split_array_into_consecutive_subsequences,Split Array into Consecutive Subsequences,True,1.0,1.0,True,0,0.3086,0.7693
+gemma3:12b,s0695_max_area_of_island,Max Area of Island,True,1.0,1.0,True,0,0.4682,0.9338
+gemma3:12b,s0637_average_of_levels_in_binary_tree,Average of Levels in Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0649_dota2_senate,Dota2 Senate,True,0.0,1.0,True,3,0.196,0.7499
+gemma3:12b,s0633_sum_of_square_numbers,Sum of Square Numbers,True,1.0,1.0,True,0,0.3696,0.8001
+gemma3:12b,s0678_valid_parenthesis_string,Valid Parenthesis String,True,1.0,1.0,True,0,0.3171,0.8004
+gemma3:12b,s0680_valid_palindrome_ii,Valid Palindrome II,True,1.0,1.0,True,0,0.5563,0.87
+gemma3:12b,s0697_degree_of_an_array,Degree of an Array,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0617_merge_two_binary_trees,Merge Two Binary Trees,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0611_valid_triangle_number,Valid Triangle Number,True,1.0,1.0,True,0,0.2134,0.7684
+gemma3:12b,s0606_construct_string_from_binary_tree,Construct String from Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0670_maximum_swap,Maximum Swap,True,1.0,1.0,True,0,0.3597,0.8279
+gemma3:12b,s0698_partition_to_k_equal_sum_subsets,Partition to K Equal Sum Subsets,True,1.0,1.0,True,0,0.4341,0.8469
+gemma3:12b,s0661_image_smoother,Image Smoother,True,1.0,1.0,True,0,0.2746,0.8149
+gemma3:12b,s0636_exclusive_time_of_functions,Exclusive Time of Functions,True,1.0,1.0,True,0,0.3861,0.8337
+gemma3:12b,s0638_shopping_offers,Shopping Offers,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0632_smallest_range_covering_elements_from_k_lists,Smallest Range Covering Elements from K Lists,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0658_find_k_closest_elements,Find K Closest Elements,True,1.0,1.0,True,0,0.742,0.8606
+gemma3:12b,s0657_robot_return_to_origin,Robot Return to Origin,True,1.0,1.0,True,0,0.2822,0.7554
+gemma3:12b,s0687_longest_univalue_path,Longest Univalue Path,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0655_print_binary_tree,Print Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0623_add_one_row_to_tree,Add One Row to Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0684_redundant_connection,Redundant Connection,True,1.0,1.0,True,0,0.4466,0.8097
+gemma3:12b,s0665_non_decreasing_array,Non-decreasing Array,True,1.0,1.0,True,0,0.4817,0.8528
+gemma3:12b,s0692_top_k_frequent_words,Top K Frequent Words,True,1.0,1.0,True,0,0.5147,0.7981
+gemma3:12b,s0667_beautiful_arrangement_ii,Beautiful Arrangement II,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0114_flatten_binary_tree_to_linked_list,Flatten Binary Tree to Linked List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0662_maximum_width_of_binary_tree,Maximum Width of Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0191_number_of_1_bits,Number of 1 Bits,True,1.0,1.0,True,0,0.2826,0.7602
+gemma3:12b,s0154_find_minimum_in_rotated_sorted_array_ii,Find Minimum in Rotated Sorted Array II,True,1.0,1.0,True,0,0.2767,0.8104
+gemma3:12b,s0151_reverse_words_in_a_string,Reverse Words in a String,True,1.0,1.0,True,0,0.2099,0.6984
+gemma3:12b,s0112_path_sum,Path Sum,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0179_largest_number,Largest Number,True,1.0,1.0,True,0,0.4971,0.8626
+gemma3:12b,s0188_best_time_to_buy_and_sell_stock_iv,Best Time to Buy and Sell Stock IV,True,1.0,1.0,True,0,0.4275,0.8321
+gemma3:12b,s0189_rotate_array,Rotate Array,True,1.0,1.0,True,0,0.5387,0.8691
+gemma3:12b,s0111_minimum_depth_of_binary_tree,Minimum Depth of Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0162_find_peak_element,Find Peak Element,True,1.0,1.0,True,0,0.6803,0.8382
+gemma3:12b,s0141_linked_list_cycle,Linked List Cycle,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0174_dungeon_game,Dungeon Game,True,1.0,1.0,True,0,0.351,0.7951
+gemma3:12b,s0110_balanced_binary_tree,Balanced Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0190_reverse_bits,Reverse Bits,True,1.0,1.0,True,0,0.5214,0.9464
+gemma3:12b,s0137_single_number_ii,Single Number II,True,1.0,1.0,True,0,0.7833,0.8677
+gemma3:12b,s0172_factorial_trailing_zeroes,Factorial Trailing Zeroes,True,1.0,1.0,True,0,0.451,0.8264
+gemma3:12b,s0129_sum_root_to_leaf_numbers,Sum Root to Leaf Numbers,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0164_maximum_gap,Maximum Gap,True,1.0,1.0,True,0,0.5073,0.839
+gemma3:12b,s0124_binary_tree_maximum_path_sum,Binary Tree Maximum Path Sum,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0140_word_break_ii,Word Break II,True,1.0,1.0,True,0,0.5303,0.8956
+gemma3:12b,s0169_majority_element,Majority Element,True,1.0,1.0,True,0,0.2236,0.7238
+gemma3:12b,s0135_candy,Candy,True,1.0,1.0,True,0,0.436,0.887
+gemma3:12b,s0119_pascals_triangle_ii,Pascal's Triangle II,True,1.0,1.0,True,0,0.308,0.8828
+gemma3:12b,s0147_insertion_sort_list,Insertion Sort List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0103_binary_tree_zigzag_level_order_traversal,Binary Tree Zigzag Level Order Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0133_clone_graph,Clone Graph,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0167_two_sum_ii_input_array_is_sorted,Two Sum II - Input Array Is Sorted,True,1.0,1.0,True,0,0.3287,0.7551
+gemma3:12b,s0165_compare_version_numbers,Compare Version Numbers,True,1.0,1.0,True,0,0.2098,0.7855
+gemma3:12b,s0200_number_of_islands,Number of Islands,True,1.0,1.0,True,0,0.3438,0.7641
+gemma3:12b,s0127_word_ladder,Word Ladder,True,1.0,1.0,True,0,0.4922,0.8937
+gemma3:12b,s0199_binary_tree_right_side_view,Binary Tree Right Side View,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0113_path_sum_ii,Path Sum II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0149_max_points_on_a_line,Max Points on a Line,True,1.0,1.0,True,0,0.3859,0.8089
+gemma3:12b,s0136_single_number,Single Number,True,1.0,1.0,True,0,0.7269,0.7844
+gemma3:12b,s0120_triangle,Triangle,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0130_surrounded_regions,Surrounded Regions,True,1.0,1.0,True,0,0.4574,0.8476
+gemma3:12b,s0116_populating_next_right_pointers_in_each_node,Populating Next Right Pointers in Each Node,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0105_construct_binary_tree_from_preorder_and_inorder_traversal,Construct Binary Tree from Preorder and Inorder Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0139_word_break,Word Break,True,1.0,1.0,True,0,0.3169,0.7867
+gemma3:12b,s0118_pascals_triangle,Pascal's Triangle,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0132_palindrome_partitioning_ii,Palindrome Partitioning II,True,1.0,1.0,True,0,0.3464,0.8398
+gemma3:12b,s0150_evaluate_reverse_polish_notation,Evaluate Reverse Polish Notation,True,1.0,1.0,True,0,0.4569,0.8581
+gemma3:12b,s0122_best_time_to_buy_and_sell_stock_ii,Best Time to Buy and Sell Stock II,True,1.0,1.0,True,0,0.8262,0.8323
+gemma3:12b,s0171_excel_sheet_column_number,Excel Sheet Column Number,True,1.0,1.0,True,0,0.4779,0.8347
+gemma3:12b,s0198_house_robber,House Robber,True,1.0,1.0,True,0,0.4496,0.7867
+gemma3:12b,s0145_binary_tree_postorder_traversal,Binary Tree Postorder Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0102_binary_tree_level_order_traversal,Binary Tree Level Order Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0187_repeated_dna_sequences,Repeated DNA Sequences,True,1.0,1.0,True,0,0.2999,0.8684
+gemma3:12b,s0106_construct_binary_tree_from_inorder_and_postorder_traversal,Construct Binary Tree from Inorder and Postorder Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0152_maximum_product_subarray,Maximum Product Subarray,True,1.0,1.0,True,0,0.4331,0.7742
+gemma3:12b,s0153_find_minimum_in_rotated_sorted_array,Find Minimum in Rotated Sorted Array,True,1.0,1.0,True,0,0.2776,0.759
+gemma3:12b,s0168_excel_sheet_column_title,Excel Sheet Column Title,True,1.0,1.0,True,0,0.4224,0.8358
+gemma3:12b,s0142_linked_list_cycle_ii,Linked List Cycle II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0115_distinct_subsequences,Distinct Subsequences,True,1.0,1.0,True,0,0.264,0.8135
+gemma3:12b,s0123_best_time_to_buy_and_sell_stock_iii,Best Time to Buy and Sell Stock III,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s0125_valid_palindrome,Valid Palindrome,True,1.0,1.0,True,0,0.2338,0.7774
+gemma3:12b,s0107_binary_tree_level_order_traversal_ii,Binary Tree Level Order Traversal II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0121_best_time_to_buy_and_sell_stock,Best Time to Buy and Sell Stock,True,1.0,1.0,True,0,0.4728,0.9515
+gemma3:12b,s0160_intersection_of_two_linked_lists,Intersection of Two Linked Lists,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0128_longest_consecutive_sequence,Longest Consecutive Sequence,True,1.0,1.0,True,0,0.4349,0.8632
+gemma3:12b,s0131_palindrome_partitioning,Palindrome Partitioning,True,1.0,1.0,True,0,0.5504,0.9135
+gemma3:12b,s0108_convert_sorted_array_to_binary_search_tree,Convert Sorted Array to Binary Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0109_convert_sorted_list_to_binary_search_tree,Convert Sorted List to Binary Search Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0104_maximum_depth_of_binary_tree,Maximum Depth of Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0143_reorder_list,Reorder List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0101_symmetric_tree,Symmetric Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0134_gas_station,Gas Station,True,1.0,1.0,True,0,0.4092,0.8263
+gemma3:12b,s0126_word_ladder_ii,Word Ladder II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0166_fraction_to_recurring_decimal,Fraction to Recurring Decimal,True,1.0,1.0,True,0,0.485,0.8677
+gemma3:12b,s0117_populating_next_right_pointers_in_each_node_ii,Populating Next Right Pointers in Each Node II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0148_sort_list,Sort List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1109_corporate_flight_bookings,Corporate Flight Bookings,True,1.0,1.0,True,0,0.4327,0.8425
+gemma3:12b,s0144_binary_tree_preorder_traversal,Binary Tree Preorder Traversal,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s0138_copy_list_with_random_pointer,Copy List with Random Pointer,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1105_filling_bookcase_shelves,Filling Bookcase Shelves,True,1.0,1.0,True,0,0.3639,0.8402
+gemma3:12b,s1189_maximum_number_of_balloons,Maximum Number of Balloons,True,1.0,1.0,True,0,0.2821,0.776
+gemma3:12b,s1185_day_of_the_week,Day of the Week,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1187_make_array_strictly_increasing,Make Array Strictly Increasing,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1162_as_far_from_land_as_possible,As Far from Land as Possible,True,0.0,1.0,True,1,0.4449,0.83
+gemma3:12b,s1156_swap_for_longest_repeated_character_substring,Swap For Longest Repeated Character Substring,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1110_delete_nodes_and_return_forest,Delete Nodes And Return Forest,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1177_can_make_palindrome_from_substring,Can Make Palindrome from Substring,True,1.0,1.0,True,0,0.3146,0.8002
+gemma3:12b,s1144_decrease_elements_to_make_array_zigzag,Decrease Elements To Make Array Zigzag,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1186_maximum_subarray_sum_with_one_deletion,Maximum Subarray Sum with One Deletion,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1130_minimum_cost_tree_from_leaf_values,Minimum Cost Tree From Leaf Values,True,0.0,1.0,True,1,0.2502,0.724
+gemma3:12b,s1140_stone_game_ii,Stone Game II,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1145_binary_tree_coloring_game,Binary Tree Coloring Game,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1125_smallest_sufficient_team,Smallest Sufficient Team,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1124_longest_well_performing_interval,Longest Well-Performing Interval,True,0.0,1.0,True,3,0.3424,0.8036
+gemma3:12b,s1154_day_of_the_year,Day of the Year,True,1.0,1.0,True,0,0.0824,0.711
+gemma3:12b,s1106_parsing_a_boolean_expression,Parsing A Boolean Expression,True,0.0,1.0,True,3,0.2515,0.7758
+gemma3:12b,s1108_defanging_an_ip_address,Defanging an IP Address,True,1.0,1.0,True,0,0.8594,0.8609
+gemma3:12b,s1163_last_substring_in_lexicographical_order,Last Substring in Lexicographical Order,True,1.0,1.0,True,0,0.2371,0.7665
+gemma3:12b,s1161_maximum_level_sum_of_a_binary_tree,Maximum Level Sum of a Binary Tree,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1128_number_of_equivalent_domino_pairs,Number of Equivalent Domino Pairs,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1155_number_of_dice_rolls_with_target_sum,Number of Dice Rolls With Target Sum,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1191_k_concatenation_maximum_sum,K-Concatenation Maximum Sum,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1123_lowest_common_ancestor_of_deepest_leaves,Lowest Common Ancestor of Deepest Leaves,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1175_prime_arrangements,Prime Arrangements,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1137_n_th_tribonacci_number,N-th Tribonacci Number,True,1.0,1.0,True,0,0.4489,0.8036
+gemma3:12b,s1169_invalid_transactions,Invalid Transactions,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1200_minimum_absolute_difference,Minimum Absolute Difference,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1122_relative_sort_array,Relative Sort Array,True,1.0,1.0,True,0,0.3321,0.7723
+gemma3:12b,s1143_longest_common_subsequence,Longest Common Subsequence,True,1.0,1.0,True,0,0.8395,0.973
+gemma3:12b,s1178_number_of_valid_words_for_each_puzzle,Number of Valid Words for Each Puzzle,True,1.0,1.0,True,0,0.4,0.8637
+gemma3:12b,s1104_path_in_zigzag_labelled_binary_tree,Path In Zigzag Labelled Binary Tree,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1190_reverse_substrings_between_each_pair_of_parentheses,Reverse Substrings Between Each Pair of Parentheses,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1129_shortest_path_with_alternating_colors,Shortest Path with Alternating Colors,True,1.0,1.0,True,0,0.4171,0.8302
+gemma3:12b,s1160_find_words_that_can_be_formed_by_characters,Find Words That Can Be Formed by Characters,True,1.0,1.0,True,0,0.5045,0.8778
+gemma3:12b,s1139_largest_1_bordered_square,Largest 1-Bordered Square,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1171_remove_zero_sum_consecutive_nodes_from_linked_list,Remove Zero Sum Consecutive Nodes from Linked List,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1131_maximum_of_absolute_value_expression,Maximum of Absolute Value Expression,True,0.0,1.0,True,3,0.2327,0.7645
+gemma3:12b,s1138_alphabet_board_path,Alphabet Board Path,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1103_distribute_candies_to_people,Distribute Candies to People,True,1.0,1.0,True,0,0.4291,0.8026
+gemma3:12b,s1170_compare_strings_by_frequency_of_the_smallest_character,Compare Strings by Frequency of the Smallest Character,True,1.0,1.0,True,0,0.3652,0.8035
+gemma3:12b,s1184_distance_between_bus_stops,Distance Between Bus Stops,True,1.0,1.0,True,0,0.3704,0.8112
+gemma3:12b,s1147_longest_chunked_palindrome_decomposition,Longest Chunked Palindrome Decomposition,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1935_maximum_number_of_words_you_can_type,Maximum Number of Words You Can Type,True,1.0,1.0,True,0,0.6039,0.8398
+gemma3:12b,s1111_maximum_nesting_depth_of_two_valid_parentheses_strings,Maximum Nesting Depth of Two Valid Parentheses Strings,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1941_check_if_all_characters_have_equal_number_of_occurrences,Check if All Characters Have Equal Number of Occurrences,True,1.0,1.0,True,0,0.2602,0.7774
+gemma3:12b,s1967_number_of_strings_that_appear_as_substrings_in_word,Number of Strings That Appear as Substrings in Word,True,1.0,1.0,True,0,0.7532,0.8692
+gemma3:12b,s1192_critical_connections_in_a_network,Critical Connections in a Network,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1961_check_if_string_is_a_prefix_of_array,Check If String Is a Prefix of Array,True,1.0,1.0,True,0,0.835,0.8674
+gemma3:12b,s1985_find_the_kth_largest_integer_in_the_array,Find the Kth Largest Integer in the Array,True,0.0,1.0,True,1,0.2883,0.741
+gemma3:12b,s1987_number_of_unique_good_subsequences,Number of Unique Good Subsequences,True,1.0,1.0,True,0,0.2508,0.7529
+gemma3:12b,s1969_minimum_non_zero_product_of_the_array_elements,Minimum Non-Zero Product of the Array Elements,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1920_build_array_from_permutation,Build Array from Permutation,True,1.0,1.0,True,0,0.9184,0.8875
+gemma3:12b,s1996_the_number_of_weak_characters_in_the_game,The Number of Weak Characters in the Game,True,1.0,1.0,True,0,0.372,0.8053
+gemma3:12b,s1982_find_array_given_subset_sums,Find Array Given Subset Sums,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1984_minimum_difference_between_highest_and_lowest_of_k_scores,Minimum Difference Between Highest and Lowest of K Scores,True,1.0,1.0,True,0,0.6949,0.8778
+gemma3:12b,s1962_remove_stones_to_minimize_the_total,Remove Stones to Minimize the Total,True,0.0,1.0,True,1,0.4955,0.8248
+gemma3:12b,s1909_remove_one_element_to_make_the_array_strictly_increasing,Remove One Element to Make the Array Strictly Increasing,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1968_array_with_elements_not_equal_to_average_of_neighbors,Array With Elements Not Equal to Average of Neighbors,False,0.0,0.0,False,4,0.0,0.0
+gemma3:12b,s1921_eliminate_maximum_number_of_monsters,Eliminate Maximum Number of Monsters,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1963_minimum_number_of_swaps_to_make_the_string_balanced,Minimum Number of Swaps to Make the String Balanced,True,1.0,1.0,True,0,0.4041,0.7866
+gemma3:12b,s1947_maximum_compatibility_score_sum,Maximum Compatibility Score Sum,True,1.0,1.0,True,0,0.3415,0.8416
+gemma3:12b,s1975_maximum_matrix_sum,Maximum Matrix Sum,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1901_find_a_peak_element_ii,Find a Peak Element II,True,1.0,1.0,True,0,0.4993,0.8217
+gemma3:12b,s1913_maximum_product_difference_between_two_pairs,Maximum Product Difference Between Two Pairs,True,1.0,1.0,True,0,0.6744,0.8777
+gemma3:12b,s1929_concatenation_of_array,Concatenation of Array,True,1.0,1.0,True,0,0.3948,0.8432
+gemma3:12b,s1964_find_the_longest_valid_obstacle_course_at_each_position,Find the Longest Valid Obstacle Course at Each Position,False,0.0,0.0,True,4,0.0,0.0
+gemma3:12b,s1914_cyclically_rotating_a_grid,Cyclically Rotating a Grid,False,0.0,0.0,True,4,0.0,0.0

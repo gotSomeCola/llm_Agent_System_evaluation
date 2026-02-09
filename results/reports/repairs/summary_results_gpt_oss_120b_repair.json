@@ -1,0 +1,12 @@
+{
+  "total_problems": 500,
+  "p1_cnt": 391,
+  "p1_rate*": 78.2,
+  "comp_last_cnt": 425,
+  "comp_last_rate*": 85.0,
+  "p_any_cnt": 418,
+  "p_any_rate*": 83.6,
+  "avg_att_to_pass*": 1.724,
+  "avg_code_bleu": 0.3235498,
+  "avg_code_bert_f1": 0.6646926
+}

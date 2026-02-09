@@ -13,17 +13,17 @@ from config import REPAIRS_EVAL_DIR, ensure_directories
 
 # Configuration
 MODELS_TO_TEST = [
-    "gpt-oss:20b",
-    "gpt-oss:120b",
-    "gemma3:27b",
-    "llama3.3:70b",
+    #"gpt-oss:20b",
+    #"gpt-oss:120b",
+    "gemma3:12b",
+    #"llama3.3:70b",
 ]
 
 # Evaluation config (same for all models)
 EVAL_CONFIG = {
     "min_count": 101,
     "max_count": 601,
-    "workers": 2,
+    "workers": 3,
 }
 
 # Output directory - use config-managed path

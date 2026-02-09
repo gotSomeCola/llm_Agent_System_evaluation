@@ -41,6 +41,15 @@ results/
         ├── gemma3-27b_tasks500_20260201_140000.csv
         ├── gemma3-27b_tasks500_20260201_140000_summary.txt
         └── summary_pass_at_k.csv
+
+  scripts/
+  ├── plots/                          # Plotting scripts
+  │   ├── plot_baseline_comparison.py
+  │   └── plot_model_comparison.py
+  └── reports/                        # Report generation scripts
+    ├── generate_evaluation_report.py
+    ├── generate_pass_at_k_report.py
+    └── generate_repair_report.py
 ```
 
 ## File Format Notes
@@ -95,8 +104,9 @@ Average Metrics:
 | run_baseline_at_k.py | evaluations/pass_at_k/ | reports/pass_at_k/ | results_*.jsonl |
 | batch_coder_tester.py | evaluations/repairs/ | reports/repairs/ | results_*.jsonl |
 | batch_test_models.py | evaluations/pass_at_k/ | reports/pass_at_k/ | results_*.jsonl |
-| generate_pass_at_1_report.py | read | reports/baseline/ | *.csv, *_summary.txt |
-| generate_pass_at_k_report.py | read | reports/pass_at_k/ | *.csv, *_summary.txt |
+| scripts/reports/generate_evaluation_report.py | read | reports/baseline/ or reports/pass_at_k/ | *.csv, *_summary.txt |
+| scripts/reports/generate_pass_at_k_report.py | read | reports/pass_at_k/ | *.csv, *_summary.txt |
+| scripts/reports/generate_repair_report.py | read | reports/repairs/ | report_*.csv, summary_*.json, summary_repairs.csv |
 
 ## Using the Configuration File
 

@@ -288,7 +288,7 @@ def main_runner_graph(output_file, min_count, max_count, concurrency=1):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output_file', type=str, default=str(REPAIRS_EVAL_DIR / "results_graph.jsonl"))
+    parser.add_argument('--output_file', type=str, default=str(REPAIRS_EVAL_DIR / "temp.jsonl"))
     parser.add_argument('--min_count', type=int, default=0)
     parser.add_argument('--max_count', type=int, default=5)
     parser.add_argument('--workers', type=int, default=1)
