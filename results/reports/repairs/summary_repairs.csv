@@ -1,5 +1,4 @@
 model,total_tasks,avg_att_to_pass*,p1_cnt,p1_rate*,comp_last_cnt,comp_last_rate*,p_any_cnt,p_any_rate*,avg_code_bleu,avg_codebert_f1
-gpt-oss:120b,500,1.7240,391,78.20,425,85.00,418,83.60,0.3235,0.6647
 gemma3:12b,500,3.0220,230,46.00,387,77.40,272,54.40,0.2312,0.4487
 gemma3:27b,500,2.6720,251,50.20,412,82.40,320,64.00,0.2856,0.5531
 gpt-oss:20b,500,1.8320,359,71.80,421,84.20,411,82.20,0.3230,0.6612
