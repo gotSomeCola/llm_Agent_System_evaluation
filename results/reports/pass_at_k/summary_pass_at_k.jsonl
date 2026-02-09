@@ -1,5 +1,3 @@
-{"model": "gpt-oss:20b", "total_tasks": 500, "avg_att_to_pass*": 2.034, "p1_cnt": 340, "p1_rate*": 68.0, "comp1_cnt": 392, "comp1_rate*": 78.4, "p_any_cnt": 392, "p_any_rate*": 78.4, "avg_code_bleu": 0.3101, "avg_code_bert_f1": 0.6326}
-{"model": "gpt-oss:120b", "total_tasks": 500, "avg_att_to_pass*": 1.718, "p1_cnt": 400, "p1_rate*": 80.0, "comp1_cnt": 419, "comp1_rate*": 83.8, "p_any_cnt": 415, "p_any_rate*": 83.0, "avg_code_bleu": 0.3262, "avg_code_bert_f1": 0.6657}
 {"model": "gemma3:12b", "total_tasks": 500, "avg_att_to_pass*": 2.994, "p1_cnt": 232, "p1_rate*": 46.4, "comp1_cnt": 383, "comp1_rate*": 76.6, "p_any_cnt": 274, "p_any_rate*": 54.8, "avg_code_bleu": 0.2349, "avg_code_bert_f1": 0.4531}
 {"model": "gemma3:27b", "total_tasks": 500, "avg_att_to_pass*": 2.66, "p1_cnt": 272, "p1_rate*": 54.4, "comp1_cnt": 385, "comp1_rate*": 77.0, "p_any_cnt": 307, "p_any_rate*": 61.4, "avg_code_bleu": 0.2792, "avg_code_bert_f1": 0.5371}
 {"model": "gpt-oss:20b", "total_tasks": 500, "avg_att_to_pass*": 2.034, "p1_cnt": 340, "p1_rate*": 68.0, "comp1_cnt": 392, "comp1_rate*": 78.4, "p_any_cnt": 392, "p_any_rate*": 78.4, "avg_code_bleu": 0.3101, "avg_code_bert_f1": 0.6326}
